@@ -16,7 +16,7 @@ if (isset($_POST['submit'])  )  {
     $sendData = mysqli_query($conn , $insertMessage);
 
 if ($sendData) {
-    header("Location: ../pages/contact.php");
+    header("Location: ../contact.php");
 }
 
 

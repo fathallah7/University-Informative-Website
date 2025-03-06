@@ -4,7 +4,7 @@
     <div class="container">
         <div class="logo">
             <a href="#">
-                <img src="../assets/imgs/log.png" alt="logo">
+                <img src="assets/imgs/log.png" alt="logo">
             </a>
         </div>
         
@@ -28,7 +28,7 @@
         <nav>
             <i class="fa-solid fa-bars toggle-menu"></i>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="#" >Home</a></li>
                 <li><a href="#" >Home</a></li>
                 <li><a href="#" >Home</a></li>
@@ -36,7 +36,7 @@
                 <li><a href="#" >Home</a></li>
                 <li><a href="#" >Home</a></li>
                 <li><a href="#" >Home</a></li>
-                <li><a href="#" >Home</a></li>
+                <li><a href="contact.php" >Contact</a></li>
             </ul>
         </nav>
         
