@@ -195,7 +195,7 @@ include 'includes/conn.php';
                     <td><?php  echo $row['name'] ?></td>
                     <td><?php  echo $row['email'] ?></td>
                     <td><?php  echo $row['message'] ?></td>
-                    <td><a href="contact.php?id=<?php echo $row['id']; ?>"><i class='bx bxs-comment-x'></i></a></td>
+                    <td><a href="back/handle_contact.php?id=<?php echo $row['id']; ?>"><i class='bx bxs-comment-x'></i></a></td>
                 </tr>
                 <?php
             }
@@ -206,15 +206,9 @@ include 'includes/conn.php';
 
 
 
-        <?php
-            $id = $_GET['id'];
-            $deleteResult = "DELETE FROM contact where id = $id";
-            mysqli_query($conn , $deleteResult);
-        ?>
 
 
-
-
+<script src="assets/js/script.js"></script>
 
 
 </body>
