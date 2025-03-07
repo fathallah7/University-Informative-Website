@@ -35,12 +35,12 @@
    </div>
 
    <nav class="navbar">
+      <a href="index.php"><i class="fas fa-home"></i><span>Home</span></a>
       <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
       <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
       <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
       <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
-      <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
-      <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
+      <a href="contact.php"><i class="fas fa-home"></i><span>Contact</span></a>
    </nav>
 
 </div>
