@@ -1,5 +1,6 @@
 <?php 
-include '../includes/conn.php'
+include '../includes/conn.php';
+session_start();
 ?>
 
 
@@ -9,10 +10,14 @@ include '../includes/conn.php'
             $result = mysqli_query($conn , $deleteResult);
 
             if ($result) {
+                $_SESSION['msg'] = "An Message Deleted";
                 header("Location:../contact.php");
+                exit();
             }
             else {
-                echo "Failed :" . mysqli_error($conn);
+                $_SESSION['error'] = "Failed :" . mysqli_error($conn);
+                header("Location:../contact.php");
+                exit();
             }
 
         ?>

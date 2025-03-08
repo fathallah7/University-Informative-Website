@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'includes/conn.php';
 ?>
 
@@ -29,19 +29,21 @@ include 'includes/conn.php';
 
 <body>
 
-<?php 
-include 'includes/header.php'
-?>
+    <?php
+    include 'includes/header.php';
+    ?>
+
+    <?php
+    include 'includes/msg.php';
+    ?>
+
+    <br>
+    <br>
+    <br>
 
 
-<br>
-<br>
-<br>
 
-
-
-
-<div class="container">
+    <div class="container">
         <div class="row justify-content-center bg-white rounded-4 shadow-lg py-5 gx-5 px-lg-5">
             <div class="col-md-6 text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 <h2 class="uf-ct-01-text-primary text-uppercase fw-bold mb-4" style="color: #3C6A77;">Contact Us</h2>
@@ -60,14 +62,14 @@ include 'includes/header.php'
                     <div class="mb-4">
                         <label for="uf-iname" class="form-label fw-semibold">Your name</label>
                         <div class="input-group">
-                            <span class="input-group-text bg-light"  style="color: #3C6A77;"><i class="fas fa-user"></i></span>
+                            <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-user"></i></span>
                             <input type="text" name="name" class="form-control border-start-0" id="uf-iname" required placeholder="Enter Your Name">
                         </div>
                     </div>
                     <div class="mb-4">
                         <label for="uf-itextarea" class="form-label fw-semibold">Your message</label>
                         <div class="input-group">
-                            <span class="input-group-text bg-light"  style="color: #3C6A77;"><i class="fas fa-message"></i></span>
+                            <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-message"></i></span>
                             <textarea class="form-control border-start-0" name="message" id="uf-itextarea" rows="4" required placeholder="Enter Your Message"></textarea>
                         </div>
                     </div>
@@ -78,19 +80,19 @@ include 'includes/header.php'
             </div>
         </div>
     </div>
-</section>
+    </section>
 
 
 
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
 
 
-<?php 
-include 'includes/footer.php'
-?>
+    <?php
+    include 'includes/footer.php'
+    ?>
 
 </body>
 
