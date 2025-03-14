@@ -1,5 +1,5 @@
 <header class="header">
-   
+
    <section class="flex">
 
       <a href="home.php" class="logo">Admin Panel</a>
@@ -17,27 +17,24 @@
       </div>
 
 
-
    </section>
 
+   <div class="side-bar">
 
-<div class="side-bar">
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
 
-   <div id="close-btn">
-      <i class="fas fa-times"></i>
+      <div class="profile">
+         <img src="assets/imgs/log.png" class="image" alt="">
+         <h3 class="name">Admin</h3>
+         <a href="#" class="btn">view profile</a>
+      </div>
+
+      <nav class="navbar">
+         <a href="index.php"><i class="fas fa-home"></i><span>Home</span></a>
+         <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
+         <a href="contact.php"><i class='bx bx-support'></i><span>Contact</span></a>
+      </nav>
+
    </div>
-
-   <div class="profile">
-      <img src="assets/imgs/admin.avif" class="image" alt="">
-      <h3 class="name">Admin</h3>
-      <p class="role">Admin</p>
-      <a href="profile.html" class="btn">view profile</a>
-   </div>
-
-   <nav class="navbar">
-      <a href="index.php"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
-      <a href="contact.php"><i class='bx bx-support' ></i><span>Contact</span></a>
-   </nav>
-
-</div>

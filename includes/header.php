@@ -3,7 +3,7 @@
 <div class="header-top">
     <div class="container">
         <div class="logo">
-            <a href="#">
+            <a href="index.php">
                 <img src="assets/imgs/log.png" alt="logo">
             </a>
         </div>

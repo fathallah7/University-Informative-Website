@@ -49,7 +49,7 @@ include 'includes/conn.php';
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2><b>Manage Students</b></h2>
+                    <h2><b>Contact Messages</b> <i class='bx bxs-message-detail'></i> </h2>
                 </div>
             </div>
         </div>
@@ -59,11 +59,11 @@ include 'includes/conn.php';
             
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Message</th>
-                    <th>Actions</th>
+                    <th><h3><b>ID</b></h3></th>
+                    <th><h3><b>Name</b></h3></th>
+                    <th><h3><b>Email</b></h3></th>
+                    <th><h3><b>Message</b></h3></th>
+                    <th><h3><b>Action</b></h3></th>
                 </tr>
             </thead>
 
@@ -75,11 +75,11 @@ include 'includes/conn.php';
                             while ($row = mysqli_fetch_assoc($result)) {     
                                 ?>
                 <tr>
-                    <td>  <?php  echo $row['id'] ?>  </td>
-                    <td><?php  echo $row['name'] ?></td>
-                    <td><?php  echo $row['email'] ?></td>
-                    <td><?php  echo $row['message'] ?></td>
-                    <td><a href="back/handle_contact_admin.php?id=<?php echo $row['id']; ?>"><i class='bx bxs-comment-x'></i></a></td>
+                    <td><h4><?php  echo $row['id'] ?></h4></td>
+                    <td><h4><?php  echo $row['name'] ?></h4></td>
+                    <td><h4><?php  echo $row['email'] ?></h4></td>
+                    <td><h4><?php  echo $row['message'] ?></h4></td>
+                    <td><a href="back/handle_contact_admin.php?id=<?php echo $row['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a></td>
                 </tr>
                 <?php
             }
