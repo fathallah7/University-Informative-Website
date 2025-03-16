@@ -41,7 +41,7 @@
         </nav>
         
         <div class="icons">
-            <a href="../back/logout.php" class="user">
+            <a href="login.php" class="user">
                 <i class="fa-solid fa-user"></i>
                 <span>Logout</span>
             </a>

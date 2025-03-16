@@ -97,30 +97,3 @@ include 'includes/conn.php';
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section class="uf-contact-form-01 mx-auto py-5">
- -->
