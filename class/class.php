@@ -56,7 +56,6 @@ class Subscriber extends User
         return $result;
     }
     }
-
 }
 
 
@@ -65,6 +64,22 @@ class Subscriber extends User
 
 
 class Admin extends User {
+
+
+        public static function ShowAccounts() {
+            require_once('../includes/conn.php');
+            $accounts = "SELECT * FROM `users` ";
+            $accountsResult = mysqli_query($conn , $accounts);
+            return $accountsResult;
+        }
+
+        public static function DeleteAccounts($id) {
+            require_once('../includes/conn.php');
+            $delete = " DELETE FROM `users` WHERE `id` = $id ";
+            $accountDelete = mysqli_query($conn , $delete);
+            return $accountDelete;
+        }
+
 
 }
 

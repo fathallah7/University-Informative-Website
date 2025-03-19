@@ -29,17 +29,97 @@ include 'includes/header.php'
 ?>
 
 
-<br>
-<br>
-<br>
-<br>
-<h1 style="text-align: center;">Home Page</h1>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <!--========== Home ==========-->
+    <section class="home-section" id="home">
+
+        <div class="background">
+        </div>
+
+        <div class="content">
+            <img src="assets/imgs/log.png" alt="Logo"  class="logo">
+            <div class="profile-content">
+                <div>
+                    <h1>Welcome To IT University</h1>
+                </div>
+            </div>
+
+            <p>The IT library offers resources for learning and innovation in computer science and technology.</p>
+            <a href="#about"><i class='bx bx-down-arrow-circle'></i> About Us</a>
+        </div>
+
+    </section>
+    <!-- End Home -->
+    <!-- --------------------------------------------------------------------------------------- -->
+
+    <!-- --------------------------------------------------------------------------------------- -->
+    <!--========== ABOUT ==========-->
+    <section class="about-section" id="about">
+
+        <h2 class="section-title">About us</h2>
+
+        <div class="container">
+
+            <div class="about-data">
+                <h2 class="about-title">Borg Al-Arab<br>Library </h2>
+                <p class="about-description">Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey. At Borg El Arab University, we are committed to fostering knowledge and innovation for all learners.
+                    .</p>
+                <a href="#services" class="button">Our Services</a>
+            </div>
+            <div>
+                <img src="assets/imgs/log.png" alt="" class="about-img" width="500px">
+            </div>
+
+        </div>
+    </section>
+    <!-- --------------------------------------------------------------------------------------- -->
+
+
+
+
+
+    <!-- --------------------------------------------------------------------------------------- -->
+    <!-- Start Services -->
+    <div class="services" id="services">
+        <div>
+            <h2 class="section-title"  > Our Services </h2>
+        </div>
+        <div class="container">
+            <div class="box-holder">
+                <a href="books.php" class="box-link">
+                    <div class="box">
+                        <i class='bx bxs-book-alt'></i>
+                        <h2>Book Sales</h2>
+                        <p>Physical and digital books, Local and international shipping.</p>
+                    </div>
+                </a>
+                <a href="courses.php" class="box-link">
+                    <div class="box">
+                        <i class='bx bx-code-block'></i>
+                        <h2>Courses</h2>
+                        <p>Training sessions or workshops based on book content.</p>
+                    </div>
+                </a>
+                <a href="translate.php" class="box-link">
+                    <div class="box">
+                        <i class='bx bx-world'></i>
+                        <h2>Translation Services</h2>
+                        <p>Providing translated versions of essential programming books.</p>
+                    </div>
+                </a>
+                <a href="testimonials.php" class="box-link">
+                    <div class="box">
+                        <i class='bx bxs-star-half'></i>
+                        <h2>Reviews and Ratings</h2>
+                        <p>A platform for readers to review and rate books.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Servcies -->
+    <!-- --------------------------------------------------------------------------------------- -->
+
 
 
 
@@ -50,67 +130,3 @@ include 'includes/footer.php'
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section class="uf-contact-form-01 mx-auto py-5">
-    <div class="container">
-        <div class="row justify-content-center bg-white rounded-4 shadow-lg py-5 gx-5 px-lg-5">
-            <div class="col-md-6 text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h2 class="uf-ct-01-text-primary text-uppercase fw-bold mb-4" style="color: #3C6A77;">Contact Us</h2>
-                <p class="mb-4">Or reach out manually to <a href="mailto:it-Library@gmail.com" class="text-decoration-none text-primary"> it-Library@gmail.com</a></p>
-                <img src="assets/imgs/log.png" alt="IT Library Logo" class="uf-img-contact-form-01 pt-4 d-md-block d-none" style="width: 450px;">
-            </div>
-            <div class="col-md-6">
-                <form action="../back/handle_contact.php" method="post" class="p-3">
-                    <div class="mb-4">
-                        <label for="uf-imail" class="form-label fw-semibold">Email address</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-envelope"></i></span>
-                            <input type="email" name="email" class="form-control border-start-0" id="uf-imail" aria-describedby="emailHelp" required placeholder="Enter Your Personal Email">
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="uf-iname" class="form-label fw-semibold">Your name</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light"  style="color: #3C6A77;"><i class="fas fa-user"></i></span>
-                            <input type="text" name="name" class="form-control border-start-0" id="uf-iname" required placeholder="Enter Your Name">
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="uf-itextarea" class="form-label fw-semibold">Your message</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light"  style="color: #3C6A77;"><i class="fas fa-message"></i></span>
-                            <textarea class="form-control border-start-0" name="message" id="uf-itextarea" rows="4" required placeholder="Enter Your Message"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-lg w-100 uf-ct-01-btn-primary" style="background-color: #3C6A77; color: white;">
-                        Send Message <i class="fas fa-paper-plane ms-2"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section> -->
