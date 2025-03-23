@@ -56,6 +56,11 @@ class Subscriber extends User
         return $result;
     }
     }
+
+
+
+
+    
 }
 
 
@@ -80,8 +85,8 @@ class Admin extends User {
             return $accountDelete;
         }
 
-
         public function AddPost( $title , $content , $imagePath , $category ) {
+            global $conn;
             require_once('../includes/conn.php');
             $addPost = "INSERT INTO `posts`(`title`, `content`, `image`, `category`)
                             VALUES ('$title', '$content','$imagePath','$category')";

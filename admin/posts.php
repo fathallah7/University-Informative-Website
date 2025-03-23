@@ -134,7 +134,7 @@
                 <form action="back/handle_posts_admin.php" method="post" enctype="multipart/form-data" >
                     <div class="mb-4">
                         <label for="postTitle" class="form-label">Post Title</label>
-                        <input type="text" name="titlr" class="form-control" id="postTitle" placeholder="Enter a classic title" required>
+                        <input type="text" name="title" class="form-control" id="postTitle" placeholder="Enter a classic title" required>
                     </div>
 
                     <div class="mb-4">

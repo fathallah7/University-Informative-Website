@@ -1,5 +1,6 @@
 <?php 
 include '../includes/conn.php';
+require_once('../../class/class.php');
 session_start();
 ?>
 
@@ -16,21 +17,17 @@ if (isset($_POST['submit'])) {
         $imageName = $_FILES['image']['name'];
         $imageTmpName = $_FILES['image']['tmp_name'];
 
-        // تحديد مسار حفظ الصورة
-        $uploadDir = 'uploads/posts/'; // المسار المطلق للمجلد
-        $imagePath = $uploadDir . basename($imageName); // بناء المسار الكامل
+        $uploadDir = 'uploads/posts/';
+        $imagePath = $uploadDir . basename($imageName); 
 
-        // إنشاء المجلد إذا لم يكن موجودًا
         if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true); // إنشاء المجلد مع صلاحيات 755
+            mkdir($uploadDir, 0755, true); 
         }
 
 
-            // تحميل الصورة إلى المجلد المحدد
             if (move_uploaded_file($imageTmpName, $imagePath)) {
-                // إدخال البيانات في قاعدة البيانات
-                require_once('../../class/class.php');
-                $admin = new Admin();
+
+                $admin = new Admin(9, 'Admin', 'admin@a', 'a');
                 $addPostResult = $admin->AddPost($title , $content , $imagePath , $category);
 
                 if ($addPostResult) {
@@ -50,9 +47,7 @@ if (isset($_POST['submit'])) {
         }
 
         else {
-            $_SESSION['error'] = "Please Enter All Information!";
-            header("Location: index.php");
-            exit();
+            echo "Error:";
         }
 
         }
