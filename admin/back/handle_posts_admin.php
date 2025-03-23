@@ -1,7 +1,7 @@
 <?php 
-include '../includes/conn.php';
-require_once('../../class/class.php');
 session_start();
+require_once('../../class/class.php');
+include '../includes/msg.php';
 ?>
 
 

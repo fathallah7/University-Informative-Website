@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if (isset($_SESSION['msg'])) {
     echo '<div id="msg" class="alert alert-success mt-0" role="alert">' . $_SESSION['msg'] . '</div>';

@@ -1,3 +1,7 @@
+<?php
+session_start();
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,20 +32,8 @@
     a {
         text-decoration: none;
     }
-</style>
 
-<body>
-
-
-
-    <?php
-    include 'includes/header.php'
-    ?>
-
-
-
-    <style>
-        .container {
+    .container {
             max-width: 1000px;
             /* زيادة العرض الأقصى */
             padding: 40px 20px;
@@ -119,10 +111,21 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
         }
-    </style>
+</style>
+
+<body>
+
+
+
+    <?php
+    include 'includes/header.php';
+    ?>
 
 
     <div class="container">
+    <?php
+    include 'includes/msg.php';
+    ?>
         <div class="card">
             <div class="card-header">
                 <span style="margin-right: 10px;">Add New Post</span>
@@ -131,7 +134,7 @@
             </div>
             <div class="card-body p-4">
 
-                <form action="back/handle_posts_admin.php" method="post" enctype="multipart/form-data" >
+                <form action="back/handle_posts_admin.php" method="post" enctype="multipart/form-data">
                     <div class="mb-4">
                         <label for="postTitle" class="form-label">Post Title</label>
                         <input type="text" name="title" class="form-control" id="postTitle" placeholder="Enter a classic title" required>
