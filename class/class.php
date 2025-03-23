@@ -81,6 +81,15 @@ class Admin extends User {
         }
 
 
+        public function AddPost( $title , $content , $imagePath , $category ) {
+            require_once('../includes/conn.php');
+            $addPost = "INSERT INTO `posts`(`title`, `content`, `image`, `category`)
+                            VALUES ('$title', '$content','$imagePath','$category')";
+            $addPostResult = mysqli_query($conn , $addPost);
+            return $addPostResult;
+        }
+
+
 }
 
 

@@ -34,6 +34,7 @@
       <nav class="navbar">
          <a href="index.php"><i class="fas fa-home"></i><span>Home</span></a>
          <a href="#"><i class="fas fa-home"></i><span>Main Page</span></a>
+         <a href="posts.php"><i class='bx bxs-image-add' ></i><span>Posts - News</span></a>
          <a href="accounts.php"><i class='bx bxs-user'></i><span>Accounts</span></a>
          <a href="contact.php"><i class='bx bx-support'></i><span>Contact</span></a>
       </nav>

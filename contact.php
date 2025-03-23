@@ -42,6 +42,7 @@ include 'includes/conn.php';
     <br>
 
 
+    <div class="container">
 
     <div class="container">
         <div class="row justify-content-center bg-white rounded-4 shadow-lg py-5 gx-5 px-lg-5">
@@ -80,6 +81,9 @@ include 'includes/conn.php';
             </div>
         </div>
     </div>
+    </div>
+
+
     </section>
 
 

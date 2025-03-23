@@ -90,7 +90,7 @@
                         </div>
                     </form>
                     <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-danger w-100 fs-6">SignUp</button>
+                        <a href="register.php" class="btn btn-lg btn-danger w-100 fs-6" >Sign Up</a>
                     </div>
                     <div class="input-group mb-3">
                     </div>

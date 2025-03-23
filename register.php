@@ -91,7 +91,7 @@ include 'includes/msg.php';
                             <input type="submit" value="Sign Up" class="btn btn-lg btn-primary w-100 fs-6" name="signup">
                         </div>
                     </form>
-
+                        <a href="login.php" class="ms-2 mt-2">I Have an Account</a>
                 </div>
             </div>
         </div>

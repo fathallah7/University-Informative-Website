@@ -12,7 +12,7 @@
 
    <!--========== File BootStrap 5 ==========-->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-   
+
    <!--========== File CSS =========-->
    <link rel="stylesheet" href="assets/css/style.css">
 
@@ -39,18 +39,6 @@
    ?>
 
 
-
-
-
-
-
-
-
-
-
-
-   <!-- custom js file link  -->
-   <script src="assets/js/script.js"></script>
 
 
 </body>
