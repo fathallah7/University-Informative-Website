@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,56 +44,74 @@
     ?>
 
 
-<!-------------------------------------------START TABLE----------------------------------------------->
-<div class="container">
-    <div class="table-wrapper">
-        <div class="table-title">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2><b>Accounts</b><i class='bx bxs-user'></i> </h2>
+    <!-------------------------------------------START TABLE----------------------------------------------->
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2><b>Accounts</b><i class='bx bxs-user'></i> </h2>
+                    </div>
                 </div>
             </div>
-        </div>
 
-<table class="table table-striped table-hover">
-            
-            <thead>
-                <tr>
-                    <th><h3><b>ID</b></h3></th>
-                    <th><h3><b>Name</b></h3></th>
-                    <th><h3><b>Email</b></h3></th>
-                    <th><h3><b>Password</b></h3></th>
-                    <th><h3><b>Action</b></h3></th>
-                </tr>
-            </thead>
+            <table class="table table-striped table-hover">
 
-            <tbody>
-                <!-------------------------------------------START READ DATA----------------------------------------------->
-                        <?php
-                        require_once('../class/class.php');
-                        $rowData = Admin::ShowAccounts();
-                        while ($row = mysqli_fetch_assoc($rowData)) {
-                            ?>
-                <tr>
-                    <td><h4> <?php echo $row['id']; ?> </h4></td>
-                    <td><h4> <?php echo $row['firstName']; ?> </h4></td>
-                    <td><h4> <?php echo $row['email']; ?> </h4></td>
-                    <td><h4> <?php echo $row['password']; ?> </h4></td>
-                    <td><a href="back/handle_accounts_admin.php?id=<?php echo $row['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a></td>
-                </tr>
-            <?php   
-            }
-            ?>
-                <!-------------------------------------------END READ DATA----------------------------------------------->
-            </tbody>
-        </table>
+                <thead>
+                    <tr>
+                        <th>
+                            <h3><b>ID</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Name</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Email</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Password</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Action</b></h3>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-------------------------------------------START READ DATA----------------------------------------------->
+                    <?php
+                    require_once('../class/class.php');
+                    $rowData = Admin::ShowAccounts();
+                    while ($row = mysqli_fetch_assoc($rowData)) {
+                    ?>
+                        <tr>
+                            <td>
+                                <h4> <?php echo $row['id']; ?> </h4>
+                            </td>
+                            <td>
+                                <h4> <?php echo $row['firstName']; ?> </h4>
+                            </td>
+                            <td>
+                                <h4> <?php echo $row['email']; ?> </h4>
+                            </td>
+                            <td>
+                                <h4> <?php echo $row['password']; ?> </h4>
+                            </td>
+                            <td><a href="back/handle_accounts_admin.php?id=<?php echo $row['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                    <!-------------------------------------------END READ DATA----------------------------------------------->
+                </tbody>
+            </table>
 
 
 
 
 
-    <!-- custom js file link  -->
-    <script src="assets/js/script.js"></script>
+            <!-- custom js file link  -->
+            <script src="assets/js/script.js"></script>
 
 
 </body>

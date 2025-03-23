@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 include 'includes/conn.php';
 ?>
 
