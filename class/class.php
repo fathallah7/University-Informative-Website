@@ -59,8 +59,17 @@ class Subscriber extends User
 
 
 
+    public static function ShowPosts() {
+        require_once('includes/conn.php');
+        $posts = "SELECT * FROM `posts`";
+        $postsResult = mysqli_query($conn , $posts);
+        return $postsResult;
+    }
 
-    
+
+
+
+
 }
 
 
