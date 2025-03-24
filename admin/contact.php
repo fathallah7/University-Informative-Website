@@ -53,7 +53,7 @@ include 'includes/conn.php';
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2><b>Contact Messages</b> <i class='bx bxs-message-detail'></i> </h2>
+                    <h2><b>Contact Messages</b> <i style="margin-left: 10px;" class='bx bxs-message-detail'></i> </h2>
                 </div>
             </div>
         </div>

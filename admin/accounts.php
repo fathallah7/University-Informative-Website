@@ -50,7 +50,7 @@ session_start();
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><b>Accounts</b><i class='bx bxs-user'></i> </h2>
+                        <h2><b>Accounts</b><i style="margin-left: 10px;" class='bx bxs-user'></i> </h2>
                     </div>
                 </div>
             </div>
