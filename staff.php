@@ -43,93 +43,29 @@ require_once('class/class.php');
                 
                 <div class="container">
                     <div class="card-container">
+
+                        <?php
+                        require_once('class/class.php');
+                        $rowData = Subscriber::ShowStaff();
+                        while ($row = mysqli_fetch_assoc($rowData)) {
+                        ?>
+
                         <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
+                            <img class="staff-img" src="admin/back/<?php echo $row['image']?> " alt="Staff Image">
+                            <h2> <?php echo $row['name'] ?> </h2>
+                            <p> <?php echo $row['category'] ?> </p>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="far fa-envelope"></i></a>
                             </div>
                         </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img class="staff-img" src="assets/imgs/image.png" alt="Abdullah Mohamed">
-                            <h2>Abdullah Mohamed</h2>
-                            <p>Library Manager</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
+
+                        <?php
+                            }
+                        ?>
+
+
                         
                     </div>
                 </div>

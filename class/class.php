@@ -57,6 +57,8 @@ class Subscriber extends User
     }
     }
 
+
+
     public static function ShowPosts() {
         require_once('includes/conn.php');
         $posts = "SELECT * FROM `posts`";
@@ -71,6 +73,14 @@ class Subscriber extends User
         return $postsMoreInfoResult;
     }
 
+
+
+    public static function ShowStaff() {
+        require_once('includes/conn.php');
+        $staff = "SELECT * FROM `staff`";
+        $staffResult = mysqli_query($conn , $staff);
+        return $staffResult;
+    }
 
 
 
