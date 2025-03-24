@@ -16,60 +16,10 @@
 
     <style>
         body {
-            font-family: 'Figtree', sans-serif;
             background-color: #f4f4f4;
         }
-        
-        .news .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .news .card:hover {
-            transform: translateY(-5px);
-        }
-        .news .card-img-top {
-            height: 250px;
-            object-fit: cover;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-        .news .category {
-            background-color: rgb(223, 223, 223);
-            color: #1a1a1a;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .card-title {
-            font-weight: 800;
-            font-size: 22px;
-        }
-        .news .card-text {
-            font-weight: 600;
-            color: #666666;
-        }
-        .news .date {
-            font-size: 14px;
-            color: #666666;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .news .btn-read-more {
-            color: #3C6A77;
-            border: solid 3px #3C6A77;
-            font-weight: 600;
-            padding: 8px 16px;
-            margin-top: 15px;
-        }
-        .news .btn-read-more:hover {
-            background-color: #3C6A77;
-            color: white;
-        }
     </style>
+
 </head>
 
 <body>
@@ -82,6 +32,8 @@ $categories = ['All', 'news', 'events', 'announcements'];
 $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
 ?>
 
+<section class="section">
+<h2 class="section-title">News</h2>
 <div class="news">
 <div class="container my-5">
     <form method="GET" class="mb-4">
@@ -121,7 +73,7 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
     </div>
 </div>
 </div>
-
+</section>
 <?php 
 include 'includes/footer.php';
 ?>
