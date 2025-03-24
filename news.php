@@ -33,7 +33,7 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
 ?>
 
 <section class="section">
-<h2 class="section-title">News</h2>
+<h2 class="section-title">What’s New</h2>
 <div class="news">
 <div class="container my-5">
     <form method="GET" class="mb-4">
