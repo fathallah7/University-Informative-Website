@@ -30,6 +30,7 @@
             <ul>
                 <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="news.php" >News</a></li>
+                <li><a href="staff.php" >Staff</a></li>
                 <li><a href="contact.php" >Contact</a></li>
             </ul>
         </nav>

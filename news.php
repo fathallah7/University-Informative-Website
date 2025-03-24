@@ -74,6 +74,8 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
 </div>
 </div>
 </section>
+
+
 <?php 
 include 'includes/footer.php';
 ?>
