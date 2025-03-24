@@ -4,9 +4,8 @@ require_once('../../class/class.php');
 include '../includes/msg.php';
 ?>
 
-
+<!-- Add Post -->
 <?php 
-
 if (isset($_POST['submit'])) {
     if (!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['category']) && !empty($_FILES['image']['name'])) {
 
@@ -23,7 +22,6 @@ if (isset($_POST['submit'])) {
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true); 
         }
-
 
             if (move_uploaded_file($imageTmpName, $imagePath)) {
 
@@ -43,17 +41,32 @@ if (isset($_POST['submit'])) {
             else {
                 echo "Error: Failed to move uploaded file.";
             }
-
         }
-
         else {
             echo "Error:";
         }
-
         }
+?>
 
+<!-- Delete Post -->
+<?php 
 
+$id = $_GET['id'];
+$doneDeleted = Admin::DeletePosts($id);
 
+if ($doneDeleted) {
+    $_SESSION['msg'] = "An Post Deleted";
+    header("Location:../posts.php");
+    exit();
+} else {
+    $_SESSION['error'] = "An Error";
+    header("Location:../posts.php");
+    exit();
+}
 
 
 ?>
+
+
+
+

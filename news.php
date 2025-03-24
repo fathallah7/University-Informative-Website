@@ -3,16 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--========== File CSS =========-->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--========== File BootStrap 5 ==========-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--========== Render Page ==========-->
     <link rel="stylesheet" href="assets/css/normalize.css">
-
-    <!--=========== ICONS ===========-->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
-</head>
 
     <style>
         body {
@@ -43,7 +35,7 @@
             border-top-right-radius: 12px;
         }
         .category {
-            background-color:rgb(223, 223, 223);
+            background-color: rgb(223, 223, 223);
             color: #1a1a1a;
             font-weight: 600;
             padding: 5px 12px;
@@ -73,60 +65,62 @@
             margin-top: 15px;
         }
         .btn-read-more:hover {
-            background-color: #3C6A77; 
+            background-color: #3C6A77;
             color: white;
         }
     </style>
+</head>
 
 <body>
 
 <?php 
-include 'includes/header.php'
+include 'includes/header.php';
+require_once('class/class.php');
+
+$categories = ['All', 'news', 'events', 'announcements'];
+$selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
 ?>
 
-
-
-
-<div class="container">
-
-
 <div class="container my-5">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- Card 1 -->
-            
-            <?php
-            require_once('class/class.php');
-            $rowData = Subscriber::ShowPosts();
-            while ($row = mysqli_fetch_assoc($rowData)) {
+    <form method="GET" class="mb-4">
+        <label for="category" class="form-label">Filter by Category:</label>
+        <select name="category" id="category" class="form-select" onchange="this.form.submit()">
+            <?php foreach ($categories as $category): ?>
+                <option value="<?php echo $category; ?>" <?php if ($category == $selectedCategory) echo 'selected'; ?>>
+                    <?php echo ucfirst($category); ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </form>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <?php
+        $rowData = Subscriber::ShowPosts();
+        while ($row = mysqli_fetch_assoc($rowData)) {
+            if ($selectedCategory == 'All' || $row['category'] == $selectedCategory) {
                 $excerpt = mb_substr($row['content'], 0, 150, 'UTF-8') . '...';
-            ?>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="admin/back/<?php echo $row['image']?>" class="card-img-top" alt="Article illustration">
-                    <div class="card-body">
-                        <span class="category"> <?php echo $row['category'] ?> </span>
-                        <p class="date">Published <?php echo $row['date'] ?></p>
-                        <h2 class="card-title"> <?php echo $row['title'] ?> </h2>
-                        <p class="card-text"> <?php echo $excerpt ?> </p>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                    </div>
+        ?>
+        <div class="col">
+            <div class="card h-100">
+                <img src="admin/back/<?php echo $row['image']; ?>" class="card-img-top" alt="Article illustration">
+                <div class="card-body">
+                    <span class="category"> <?php echo $row['category']; ?> </span>
+                    <p class="date">Published <?php echo $row['date']; ?></p>
+                    <h2 class="card-title"> <?php echo $row['title']; ?> </h2>
+                    <p class="card-text"> <?php echo $excerpt; ?> </p>
+                    <a href="newsMoreinfo.php?id=<?php echo $row['id']; ?>" class="btn btn-read-more">Read More</a>
                 </div>
             </div>
-                <?php 
-                }
-                ?>
-
         </div>
+        <?php
+            }
+        }
+        ?>
     </div>
-
-    </div>
-
-
-
-
+</div>
 
 <?php 
-include 'includes/footer.php'
+include 'includes/footer.php';
 ?>
 
 </body>

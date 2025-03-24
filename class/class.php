@@ -57,13 +57,18 @@ class Subscriber extends User
     }
     }
 
-
-
     public static function ShowPosts() {
         require_once('includes/conn.php');
         $posts = "SELECT * FROM `posts`";
         $postsResult = mysqli_query($conn , $posts);
         return $postsResult;
+    }
+
+    public static function ShowPostsMoreInfo($id) {
+        require_once('includes/conn.php');
+        $postsMoreInfo = "SELECT * FROM `posts` WHERE `id` = $id";
+        $postsMoreInfoResult = mysqli_query($conn , $postsMoreInfo);
+        return $postsMoreInfoResult;
     }
 
 
@@ -94,6 +99,7 @@ class Admin extends User {
             return $accountDelete;
         }
 
+
         public function AddPost( $title , $content , $imagePath , $category ) {
             global $conn;
             require_once('../includes/conn.php');
@@ -103,6 +109,19 @@ class Admin extends User {
             return $addPostResult;
         }
 
+        public static function ShowPosts() {
+            require_once('includes/conn.php');
+            $posts = "SELECT * FROM `posts`";
+            $postsResult = mysqli_query($conn , $posts);
+            return $postsResult;
+        }
+
+        public static function DeletePosts($id) {
+            require_once('../includes/conn.php');
+            $DeletePosts = "DELETE FROM `posts` WHERE `id` = $id";
+            $DeletePostsResult = mysqli_query($conn , $DeletePosts);
+            return $DeletePostsResult;
+        }
 
 }
 
