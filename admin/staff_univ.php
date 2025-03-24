@@ -184,6 +184,9 @@ session_start();
                             <h3><b>ID</b></h3>
                         </th>
                         <th>
+                            <h3><b>Photo</b></h3>
+                        </th>
+                        <th>
                             <h3><b>Name</b></h3>
                         </th>
                         <th>
@@ -210,6 +213,9 @@ session_start();
                                 <h4> <?php echo $row['id']; ?> </h4>
                             </td>
                             <td>
+                                <img src="back/<?php echo $row['image']; ?>" alt="Staff Image" width="50px">
+                            </td>
+                            <td>
                                 <h4> <?php echo $row['name']; ?> </h4>
                             </td>
                             <td>
@@ -220,7 +226,6 @@ session_start();
                             </td>
                             <td>
                             <a href="back/handle_staff_admin.php?id=<?php echo $row['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a> 
-                            <a href="?id=<?php echo $row['id']; ?>"><i style="color:rgb(12, 173, 0); " class='bx bx-edit-alt'></i></a>
                             </td>
                         </tr>
                     <?php
