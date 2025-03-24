@@ -35,11 +35,8 @@ session_start();
 
     .container {
             max-width: 1000px;
-            /* زيادة العرض الأقصى */
             padding: 40px 20px;
-            /* زيادة الـ padding */
             margin: 0 auto;
-            /* توسيط المحتوى */
         }
 
         .card {
@@ -49,9 +46,7 @@ session_start();
             position: relative;
             animation: fadeIn 0.5s ease-in-out;
             margin-top: 20px;
-            /* إضافة margin أعلى */
             width: 100%;
-            /* جعل العرض 100% */
         }
 
         .card-header {
