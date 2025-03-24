@@ -123,6 +123,20 @@ class Admin extends User {
             return $DeletePostsResult;
         }
 
+
+
+
+
+        public static function AddStaff($name , $category , $imagePath , $cv = null) {
+            require_once('../includes/conn.php');
+            $staff = "INSERT INTO `staff`(`name`, `category`, `image`, `cvLink`)
+                        VALUES ('$name', '$category', '$imagePath', '$cv')";
+            $staffResult = mysqli_query($conn , $staff);
+            return $staffResult;
+        }
+
+
+
 }
 
 
