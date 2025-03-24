@@ -4,7 +4,7 @@ require_once('../../class/class.php');
 include '../includes/msg.php';
 ?>
 
-<!-- Add Post -->
+<!-- Add Staff -->
 <?php 
 if (isset($_POST['submit'])) {
     if (!empty($_POST['name']) && !empty($_POST['category']) && !empty($_FILES['image']['name'])) {
@@ -49,5 +49,20 @@ if (isset($_POST['submit'])) {
 
 
 
+<!-- Delete Staff -->
+<?php 
 
+$id = $_GET['id'];
+$doneDeleted = Admin::DeleteStaff($id);
 
+if ($doneDeleted) {
+    $_SESSION['msg'] = "An Staff Deleted";
+    header("Location:../staff_univ.php");
+    exit();
+} else {
+    $_SESSION['error'] = "An Error";
+    header("Location:../staff_univ.php");
+    exit();
+}
+
+?>

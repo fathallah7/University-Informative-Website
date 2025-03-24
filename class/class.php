@@ -129,10 +129,24 @@ class Admin extends User {
 
         public static function AddStaff($name , $category , $imagePath , $cv = null) {
             require_once('../includes/conn.php');
-            $staff = "INSERT INTO `staff`(`name`, `category`, `image`, `cvLink`)
+            $addStaff = "INSERT INTO `staff`(`name`, `category`, `image`, `cvLink`)
                         VALUES ('$name', '$category', '$imagePath', '$cv')";
+            $staffResult = mysqli_query($conn , $addStaff);
+            return $staffResult;
+        }
+
+        public static function ShowStaff() {
+            require_once('includes/conn.php');
+            $staff = "SELECT * FROM `staff`";
             $staffResult = mysqli_query($conn , $staff);
             return $staffResult;
+        }
+
+        public static function DeleteStaff($id) {
+            require_once('../includes/conn.php');
+            $DeleteStaff = "DELETE FROM `staff` WHERE `id` = $id";
+            $DeleteStaffResult = mysqli_query($conn , $DeleteStaff);
+            return $DeleteStaffResult;
         }
 
 
