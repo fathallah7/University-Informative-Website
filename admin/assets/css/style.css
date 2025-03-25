@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-  --main-color: #04135e;
-  --red: #e74c3c;
-  --orange: #f39c12;
+  --main-color: #3C6A77;
   --light-color: #888;
   --light-bg: #eee;
   --black: #2c3e50;
@@ -148,7 +146,7 @@ section {
   background-color: var(--white);
   z-index: 1000;
   border-bottom: var(--border);
-  padding: 1rem 2rem; /* تعديل الـ padding */
+  padding: 1rem 2rem; 
 }
 
 .header .flex {
@@ -397,8 +395,7 @@ section {
 /* ------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------ */
 
-
-/* Start Contact Table  */
+/* Start Table  */
 
 .table-wrapper {
   background: #fff;
@@ -410,7 +407,7 @@ section {
 
 .table-title {
   padding-bottom: 15px;
-  background: #566787;
+  background: var(--main-color);
   color: #fff;
   padding: 16px 30px;
   margin: -20px -25px 10px;
@@ -492,18 +489,6 @@ table.table td a {
   outline: none !important;
 }
 
-table.table td a:hover {
-  color: #2196F3;
-}
-
-table.table td a.edit {
-  color: #FFC107;
-}
-
-table.table td a.delete {
-  color: #F44336;
-}
-
 table.table td i {
   font-size: 19px;
 }
@@ -513,6 +498,106 @@ table.table .avatar {
   vertical-align: middle;
   margin-right: 10px;
 }
-/* End Contact Table  */
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  table .table {
+    width: 100%;
+    min-width: 600px; 
+  }
+
+  table.table tr th,
+  table.table tr td {
+    white-space: nowrap; 
+  }
+}
+
+/* End Table  */
+
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ */
+
+/* Start Form */
+
+.formAdd .container {
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.formAdd .card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.formAdd .card-header {
+  background: #3C6A77;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+
+
+.formAdd .card-header span {
+  position: relative;
+  z-index: 1;
+}
+
+.formAdd .form-control,
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #3C6A77;
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.formAdd .form-control:focus,
+.form-select:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.formAdd .form-label {
+  font-weight: 600;
+  font-size: 18px;
+  color: #3C6A77;
+}
+
+.formAdd .form-control::placeholder {
+  font-size: 14px;
+  color: #3C6A77;
+}
+
+.formAdd .btn-submit {
+  background: #3C6A77;
+  padding: 12px 30px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.formAdd .btn-submit:hover {
+  background: #d4af37;
+  color: #3C6A77;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
+}
+
+/* End Form */
+
 /* ------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------ */

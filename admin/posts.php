@@ -33,89 +33,16 @@ session_start();
         text-decoration: none;
     }
 
-    .container {
-            max-width: 1000px;
-            padding: 40px 20px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            position: relative;
-            animation: fadeIn 0.5s ease-in-out;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .card-header {
-            background: #1b2a49;
-            color: #fff;
-            padding: 20px;
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-align: center;
-            position: relative;
-        }
-
-
-        .card-header span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .form-control,
-        .form-select {
-            border-radius: 8px;
-            border: 1px solid #1b2a49;
-            font-family: 'Georgia', serif;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            border-color: #d4af37;
-            box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
-        }
-
-        .form-label {
-            font-weight: 600;
-            font-size: 18px;
-            color: #1b2a49;
-        }
-
-        .form-control::placeholder {
-            font-size: 14px;
-            color: #1b2a49;
-        }
-
-        .btn-submit {
-            background: #1b2a49;
-            padding: 12px 30px;
-            font-weight: 600;
-            color: #fff;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background: #d4af37;
-            color: #1b2a49;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
-        }
 </style>
 
 <body>
-
 
 
     <?php
     include 'includes/header.php';
     ?>
 
+<section class="formAdd">
 
     <div class="container">
     <?php
@@ -231,8 +158,8 @@ session_start();
                 </tbody>
             </table>
 
-            
 
+    </section>
 
     <!-- custom js file link  -->
     <script src="assets/js/script.js"></script>
