@@ -70,7 +70,7 @@ require_once('class/class.php');
         </section>
 
 
-
+        <script src="assets/js/script.js"></script>
 
 <?php 
 include 'includes/footer.php';
