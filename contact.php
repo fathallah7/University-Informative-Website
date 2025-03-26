@@ -92,7 +92,7 @@ include 'includes/conn.php';
     <br>
     <br>
 
-
+    <script src="assets/js/script.js"></script>
 
     <?php
     include 'includes/footer.php'
