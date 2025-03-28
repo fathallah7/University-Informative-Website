@@ -47,8 +47,8 @@ include 'includes/conn.php';
     <div class="container">
         <div class="row justify-content-center bg-white rounded-4 shadow-lg py-5 gx-5 px-lg-5">
             <div class="col-md-6 text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h2 class="uf-ct-01-text-primary text-uppercase fw-bold mb-4" style="color: #3C6A77;">Contact Us</h2>
-                <p class="mb-4">Or reach out manually to <a href="mailto:it-Library@gmail.com" class="text-decoration-none text-primary"> it-Library@gmail.com</a></p>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="mb-4 mt-3">Or reach out manually to <a href="mailto:it-Library@gmail.com" class="text-decoration-none text-primary"> it-Library@gmail.com</a></p>
                 <img src="assets/imgs/log.png" alt="IT Library Logo" class="uf-img-contact-form-01 pt-4 d-md-block d-none" style="width: 450px;">
             </div>
             <div class="col-md-6">
