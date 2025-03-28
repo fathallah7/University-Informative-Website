@@ -58,7 +58,7 @@
 <br>
 
     <!----------------------- Main Container -------------------------->
-    <div class="container d-flex justify-content-center align-items-center mt-5 mb-5 pt-5 pb-5">
+    <div class="container d-flex justify-content-center align-items-center mt-4 mb-4  pb-1">
         <!----------------------- Login Container -------------------------->
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <!--------------------------- Left Box ----------------------------->
@@ -108,7 +108,7 @@
 
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="my-" style="background-color: #3C6A77; ">
-        <footer class="text-center text-lg-start  mt-xl-1 pt-0">
+        <footer class="text-center text-lg-start   pt-0">
 
             <!-- Copyright -->
             <div class="text-center p-3 border-top border-white">

@@ -30,3 +30,39 @@ function highlightActiveDot() {
 
 newsContainer.addEventListener('scroll', highlightActiveDot);
 window.addEventListener('load', updateDots);
+
+
+
+
+// ---------------------------------------------
+
+// testimonials 
+
+function openReviewForm() {
+    document.getElementById('reviewForm').style.display = 'flex';
+}
+
+function closeReviewForm() {
+    document.getElementById('reviewForm').style.display = 'none';
+}
+
+// Close form when clicking outside
+window.onclick = function(event) {
+    let modal = document.getElementById('reviewForm');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Optional: Add AOS (Animate On Scroll) library for smooth animations
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    }
+});
+
+// ---------------------------------------------

@@ -830,6 +830,193 @@ a {
 
 /*======================================================================================*/
 
+
+
+/*======================================================================================*/
+/*Start Testimonials*/
+
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    color: var(--main2-color);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 18px;
+}
+
+.add-review {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.add-review button {
+    background-color: var(--main2-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-review button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--main2-color);
+}
+
+.reviewer-info h4 {
+    margin: 0;
+    color: var(--main2-color);
+    font-size: 18px;
+}
+
+.rating {
+    color: #ffd700;
+    margin-top: 5px;
+}
+
+.review-content {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Review Form Styles */
+.review-form-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-form {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.review-form h3 {
+    color: var(--main2-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.review-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: 16px;
+}
+
+.review-form textarea:focus {
+    outline: none;
+    border-color: var(--main2-color);
+}
+
+.review-form button {
+    background: var(--main2-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.review-form button:hover {
+    background: #2a4b54;
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+}
+/*End Testimonials*/
+/*======================================================================================*/
+
+
+
 /* Start Staff  */
 
 .staff-section {
