@@ -31,9 +31,6 @@ function highlightActiveDot() {
 newsContainer.addEventListener('scroll', highlightActiveDot);
 window.addEventListener('load', updateDots);
 
-
-
-
 // ---------------------------------------------
 
 // testimonials 
