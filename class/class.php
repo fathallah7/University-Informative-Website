@@ -84,6 +84,10 @@ class Subscriber extends User
 
 
 
+    public static function AddTestimonials() {
+        
+    }
+
 
 }
 

@@ -49,6 +49,7 @@
 
 
 <?php  
+session_start();
 include 'includes/msg.php';
 ?>
 
