@@ -27,6 +27,7 @@
 <?php 
 session_start();
 include 'includes/header.php';
+include 'includes/msg.php';
 require_once('class/class.php');
 ?>
 
@@ -53,8 +54,8 @@ require_once('class/class.php');
                 <div class="review-form">
                     <span class="close-form" onclick="closeReviewForm()">&times;</span>
                     <h3>Share Your Feedback</h3>
-                    <form action="../back/handle_testimonials.php" method="post">
-                        <textarea name="text" placeholder="Write your review here..." required></textarea>
+                    <form action="back/handle_testimonials.php" method="post">
+                        <textarea name="content" placeholder="Write your review here..." required></textarea>
                         <button type="submit" name="send">Submit Review</button>
                     </form>
                 </div>
@@ -63,151 +64,31 @@ require_once('class/class.php');
 
             <!-- Reviews Grid -->
             <div class="reviews-grid" id="card">
+                    <?php 
+                        require_once('class/class.php');
+                        $rowData = Subscriber::ShowTestimonials();
+                        while ($row = mysqli_fetch_assoc($rowData)) {
+                    ?>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="assets/imgs/log.png" alt="User">
+                            <div class="reviewer-info">
+                                <h4><?php echo $row['firstName'] . " " . $row['lastName'] ?></h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <?php echo $row['content'] ?>
+                        </div>
+                    </div>
+                    <?php } ?>
 
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
-                            <div class="reviewer-info">
-                                <h4>xxxxxxxxx</h4>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            ddddddddddddddddddddddddddddddddddddd
-                        </div>
-                    </div>
 
             </div>
         </div>

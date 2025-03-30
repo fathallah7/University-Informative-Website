@@ -84,8 +84,22 @@ class Subscriber extends User
 
 
 
-    public static function AddTestimonials() {
-        
+    public static function AddTestimonials($userId , $userEmail , $content) {
+        require_once('../includes/conn.php');
+        $addTestimonials = "INSERT INTO `testimonials`(`user_id`, `user_email`, `content`)
+                                VALUES ('$userId','$userEmail','$content')";
+        $addTestimonialsResult = mysqli_query($conn , $addTestimonials);
+        return $addTestimonialsResult;
+    }
+
+    public static function ShowTestimonials() {
+        require_once('includes/conn.php');
+        $showTestimonials = "SELECT testimonials.*, users.firstName, users.lastName
+                            FROM testimonials 
+                            JOIN users ON testimonials.user_id = users.id 
+                            ORDER BY testimonials.id DESC";
+        $showTestimonialsResult = mysqli_query($conn , $showTestimonials);
+        return $showTestimonialsResult;
     }
 
 

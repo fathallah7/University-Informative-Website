@@ -49,8 +49,9 @@ if (isset($_POST['signIn'])) {
         $user = User::login($email , $password) ;
         if ($user) {
             $_SESSION['user'] = $user;
-            // $_SESSION['msg'] = "You Have Signed IN"; 
-            
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_email'] = $user['email'];
+
             if ($user['role'] === 'admin') {
                 header("Location:../admin/index.php");
             }
