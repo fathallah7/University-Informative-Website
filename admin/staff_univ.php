@@ -66,9 +66,10 @@ session_start();
                         <label for="memberCategory" class="form-label">Member Category</label>
                         <select name="category" class="form-select" id="memberCategory" required>
                             <option value="" disabled selected>Select a category</option>
-                            <option value="Doctor">Doctor</option>
-                            <option value="Assistant">AnnouncemAssistantents</option>
-                            <option value="Administrator">Administrator</option>
+                            <option value="Software">Software</option>
+                            <option value="Networking">Networking</option>
+                            <option value="AI">AI</option>
+                            <option value="Communication">Communication</option>
                         </select>
                     </div>
 
