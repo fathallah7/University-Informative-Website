@@ -94,7 +94,7 @@ class Subscriber extends User
 
     public static function ShowTestimonials() {
         require_once('includes/conn.php');
-        $showTestimonials = "SELECT testimonials.*, users.firstName, users.lastName
+        $showTestimonials = "SELECT testimonials.*, users.firstName, users.lastName , users.image
                             FROM testimonials 
                             JOIN users ON testimonials.user_id = users.id 
                             ORDER BY testimonials.id DESC";

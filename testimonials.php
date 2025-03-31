@@ -71,7 +71,7 @@ require_once('class/class.php');
                     ?>
                     <div class="review-card">
                         <div class="review-header">
-                            <img src="assets/imgs/log.png" alt="User">
+                            <img src="<?php echo $row['image'] ?>" alt="User">
                             <div class="reviewer-info">
                                 <h4><?php echo $row['firstName'] . " " . $row['lastName'] ?></h4>
                                 <div class="rating">
