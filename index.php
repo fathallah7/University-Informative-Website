@@ -179,36 +179,36 @@ require_once('class/class.php');
     <!-- Start Services -->
     <div class="services" id="services">
         <div>
-            <h2 class="section-title"> Our Services </h2>
+            <h2 class="section-title"> Our Programs </h2>
         </div>
         <div class="container">
             <div class="box-holder">
                 <a href="books.php" class="box-link">
                     <div class="box">
-                        <i class='bx bxs-book-alt'></i>
-                        <h2>Book Sales</h2>
-                        <p>Physical and digital books, Local and international shipping.</p>
+                    <i class="fa-solid fa-laptop-code"></i>
+                        <h2>Software</h2>
+                        <p>Development, programming, databases, security, applications, frameworks, testing.</p>
                     </div>
                 </a>
                 <a href="courses.php" class="box-link">
                     <div class="box">
-                        <i class='bx bx-code-block'></i>
-                        <h2>Courses</h2>
-                        <p>Training sessions or workshops based on book content.</p>
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h2>Networking</h2>
+                        <p>Protocols, security, cloud, infrastructure, administration, routing, wireless.</p>
                     </div>
                 </a>
                 <a href="translate.php" class="box-link">
                     <div class="box">
-                        <i class='bx bx-world'></i>
-                        <h2>Translation Services</h2>
-                        <p>Providing translated versions of essential programming books.</p>
+                    <i class="fa-solid fa-robot"></i>
+                        <h2>AI</h2>
+                        <p>Machine learning, deep learning, automation, algorithms, data science, robotics, NLP.</p>
                     </div>
                 </a>
                 <a href="testimonials.php" class="box-link">
                     <div class="box">
-                        <i class='bx bxs-star-half'></i>
-                        <h2>Reviews and Ratings</h2>
-                        <p>A platform for readers to review and rate books.</p>
+                    <i class="fa-solid fa-tower-cell"></i>
+                        <h2>Communication</h2>
+                        <p>Signals, transmission, modulation, wireless, fiber optics, protocols, networking.</p>
                     </div>
                 </a>
             </div>
