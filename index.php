@@ -183,28 +183,28 @@ require_once('class/class.php');
         </div>
         <div class="container">
             <div class="box-holder">
-                <a href="books.php" class="box-link">
+                <a href="software-programe.php" class="box-link">
                     <div class="box">
                     <i class="fa-solid fa-laptop-code"></i>
                         <h2>Software</h2>
                         <p>Development, programming, databases, security, applications, frameworks, testing.</p>
                     </div>
                 </a>
-                <a href="courses.php" class="box-link">
+                <a href="networking-program.php" class="box-link">
                     <div class="box">
                         <i class="fa-solid fa-network-wired"></i>
                         <h2>Networking</h2>
                         <p>Protocols, security, cloud, infrastructure, administration, routing, wireless.</p>
                     </div>
                 </a>
-                <a href="translate.php" class="box-link">
+                <a href="ai-program.php" class="box-link">
                     <div class="box">
                     <i class="fa-solid fa-robot"></i>
                         <h2>AI</h2>
                         <p>Machine learning, deep learning, automation, algorithms, data science, robotics, NLP.</p>
                     </div>
                 </a>
-                <a href="testimonials.php" class="box-link">
+                <a href="communication-program.php" class="box-link">
                     <div class="box">
                     <i class="fa-solid fa-tower-cell"></i>
                         <h2>Communication</h2>

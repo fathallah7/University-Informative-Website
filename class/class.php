@@ -77,6 +77,7 @@ class Subscriber extends User
 
     public static function ShowStaff() {
         require_once('includes/conn.php');
+        // global $conn;
         $staff = "SELECT * FROM `staff`";
         $staffResult = mysqli_query($conn , $staff);
         return $staffResult;

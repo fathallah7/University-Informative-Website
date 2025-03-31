@@ -26,7 +26,7 @@
 
 <?php 
 include 'includes/header.php';
-require_once('class/class.php');
+// require_once('class/class.php');
 ?>
 
 
