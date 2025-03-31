@@ -13,9 +13,8 @@ A **university website** built with **PHP (OOP), MySQL, and a structured backend
 
 ### 📂 Content Management (CRUD)  
 - **Create, Read, Update, Delete** (CRUD) functionality for:  
-  - News & announcements  
+  - News & announcements & Events
   - Faculty profiles  
-  - Events & deadlines  
 
 ### 🎓 Course & Faculty Management  
 - Display **academic programs** with faculty details.  
