@@ -25,7 +25,6 @@
 <body>
 
 <?php 
-session_start();
 include 'includes/header.php';
 include 'includes/msg.php';
 require_once('class/class.php');

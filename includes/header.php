@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 
 <!-- Start Header-Top -->
 <div class="header-top">
@@ -36,12 +39,30 @@
             </ul>
         </nav>
         
+<?php 
+if (isset($_SESSION['user'])) {
+?>
         <div class="icons">
             <a href="login.php" class="user">
-                <i class="fa-solid fa-user"></i>
+            <i class='bx bx-log-out' ></i>
                 <span>Logout</span>
             </a>
         </div>
+<?php 
+} else 
+{
+?>
+        <div class="icons">
+            <a href="login.php" class="user">
+                <i class="fa-solid fa-user"></i>
+                <span>Login</span>
+            </a>
+        </div>
+<?php 
+}
+?>
+
+
     </div>
 </div>
 
