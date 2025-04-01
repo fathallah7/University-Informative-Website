@@ -43,6 +43,10 @@ session_start();
 if (isset($_SESSION['user'])) {
 ?>
         <div class="icons">
+            <a href="profile.php" class="user">
+            <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
             <a href="back/handle_logout.php" class="user">
             <i class='bx bx-log-out' ></i>
                 <span>Logout</span>

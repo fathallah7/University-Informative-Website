@@ -15,9 +15,11 @@
     <title>Home</title>
 
     <style>
+
         body {
             background-color: #f4f4f4;
         }
+
     </style>
 
 </head>
@@ -57,7 +59,7 @@ require_once('class/class.php');
                         <textarea name="content" placeholder="Write your review here..." required></textarea>
                         <button type="submit" name="send">Submit Review</button>
                     </form>
-                </div>
+                </div> 
             </div>
 
 
