@@ -643,6 +643,10 @@ a {
     margin-bottom: 100px;
 } 
 
+.about-section .container img{
+    border-radius: 30px;
+} 
+
 .about-data {
     max-width: 100% ;
     width: 650px;

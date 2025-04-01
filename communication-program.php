@@ -42,7 +42,7 @@
                 <a href="#services" class="button">Our Services</a>
             </div>
             <div>
-                <img src="assets/imgs/log.png" alt="" class="about-img" width="500px">
+                <img src="assets/imgs/Communication.jpg" alt="" class="about-img" width="500px">
             </div>
         </div>
     </section>
