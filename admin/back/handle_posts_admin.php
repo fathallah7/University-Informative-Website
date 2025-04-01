@@ -47,6 +47,42 @@ if (isset($_POST['submit'])) {
         }
         }
 ?>
+<!-- Add Post -->
+
+
+
+
+
+<!-- Update Post -->
+
+<?php 
+if (isset($_GET['id_update'])) {
+    $_SESSION['id_update'] = $_GET['id_update'];
+    header("Location:../postsUpdate.php");
+    exit();
+}
+
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $titleUpdate = $_POST['titleUpdate'];
+    $contentUpdate = $_POST['contentUpdate'];
+
+    $updateResult = Admin::UpdatePosts($id , $titleUpdate , $contentUpdate);
+    if ($updateResult) {
+        $_SESSION['msg'] = "The Post Updated";
+        header("Location:../posts.php");
+    }
+    else {
+        $_SESSION['error'] = "An Error";
+    }
+}
+?>
+
+<!-- Update Post -->
+
+
+
+
 
 <!-- Delete Post -->
 <?php 
@@ -63,10 +99,8 @@ if ($doneDeleted) {
     header("Location:../posts.php");
     exit();
 }
-
-
 ?>
-
+<!-- Delete Post -->
 
 
 

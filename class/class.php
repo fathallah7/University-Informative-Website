@@ -145,6 +145,14 @@ class Admin extends User {
             return $postsResult;
         }
 
+        public static function UpdatePosts($id , $title  , $content) {
+            require_once('../includes/conn.php');
+            $updatePost = "UPDATE `posts` SET `title`='$title', `content`='$content' 
+                WHERE `id` = '$id' ";
+                $updatePostResult = mysqli_query($conn , $updatePost);
+            return $updatePostResult;
+        }
+
         public static function DeletePosts($id) {
             require_once('../includes/conn.php');
             $DeletePosts = "DELETE FROM `posts` WHERE `id` = $id";
