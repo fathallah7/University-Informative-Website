@@ -1,5 +1,5 @@
 <?php
-include '../includes/conn.php';
+include '../pages/includes/conn.php';
 session_start();
 ?>
 
@@ -19,16 +19,16 @@ if (isset($_POST['submit'])) {
 
         if ($sendData) {
             $_SESSION['msg'] = "Your Message Sent";
-            header("Location: ../contact.php");
+            header("Location: ../pages/contact.php");
             exit();
         } else {
             $_SESSION['error'] = "Your Message Not Sent";
-            header("Location: ../contact.php");
+            header("Location: ../pages/contact.php");
             exit();
         }
     } else {
         $_SESSION['error'] = "Enter All Fields";
-        header("Location: ../contact.php");
+        header("Location: ../pages/contact.php");
         exit();
     }
 }
