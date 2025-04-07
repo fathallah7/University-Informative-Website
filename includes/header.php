@@ -7,7 +7,7 @@ session_start();
     <div class="container">
         <div class="logo">
             <a href="index.php">
-                <img src="assets/imgs/log.png" alt="logo">
+                <img src="../assets/imgs/log.png" alt="logo">
             </a>
         </div>
         
@@ -47,7 +47,7 @@ if (isset($_SESSION['user'])) {
             <i class="fa-solid fa-user"></i>
                 <span>Profile</span>
             </a>
-            <a href="back/handle_logout.php" class="user">
+            <a href="../back/handle_logout.php" class="user">
             <i class='bx bx-log-out' ></i>
                 <span>Logout</span>
             </a>
@@ -65,7 +65,6 @@ if (isset($_SESSION['user'])) {
 <?php 
 }
 ?>
-
 
     </div>
 </div>

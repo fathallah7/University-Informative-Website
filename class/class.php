@@ -60,14 +60,14 @@ class Subscriber extends User
 
 
     public static function ShowPosts() {
-        require_once('includes/conn.php');
+        require_once('../includes/conn.php');
         $posts = "SELECT * FROM `posts`";
         $postsResult = mysqli_query($conn , $posts);
         return $postsResult;
     }
 
     public static function ShowPostsMoreInfo($id) {
-        require_once('includes/conn.php');
+        require_once('../includes/conn.php');
         $postsMoreInfo = "SELECT * FROM `posts` WHERE `id` = $id";
         $postsMoreInfoResult = mysqli_query($conn , $postsMoreInfo);
         return $postsMoreInfoResult;
@@ -76,7 +76,7 @@ class Subscriber extends User
 
 
     public static function ShowStaff() {
-        require_once('includes/conn.php');
+        require_once('../includes/conn.php');
         // global $conn;
         $staff = "SELECT * FROM `staff`";
         $staffResult = mysqli_query($conn , $staff);
@@ -94,7 +94,7 @@ class Subscriber extends User
     }
 
     public static function ShowTestimonials() {
-        require_once('includes/conn.php');
+        require_once('../includes/conn.php');
         $showTestimonials = "SELECT testimonials.*, users.firstName, users.lastName , users.image
                             FROM testimonials 
                             JOIN users ON testimonials.user_id = users.id 

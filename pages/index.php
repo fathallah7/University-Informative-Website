@@ -1,5 +1,5 @@
 <?php
-require_once('class/class.php');
+require_once('../class/class.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,21 +8,21 @@ require_once('class/class.php');
 <head>
     <meta charset="UTF-8">
     <!--========== File CSS =========-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <!--========== File BootStrap 5 ==========-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
     <!--========== Render Page ==========-->
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
 
     <!--=========== ICONS ===========-->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 </head>
 
@@ -107,7 +107,7 @@ require_once('class/class.php');
 <body>
 
     <?php
-    include 'includes/header.php'
+    include '../includes/header.php'
     ?>
 
 
@@ -116,7 +116,7 @@ require_once('class/class.php');
         <div class="background">
         </div>
         <div class="content">
-            <img src="assets/imgs/log.png" alt="Logo" class="logo">
+            <img src="../assets/imgs/log.png" alt="Logo" class="logo">
             <div class="profile-content">
                 <div>
                     <h1>Welcome To IT University</h1>
@@ -141,7 +141,7 @@ require_once('class/class.php');
                 <a href="#services" class="button">Our Services</a>
             </div>
             <div>
-                <img src="assets/imgs/log.png" alt="" class="about-img" width="500px">
+                <img src="../assets/imgs/log.png" alt="" class="about-img" width="500px">
             </div>
         </div>
     </section>
@@ -160,7 +160,7 @@ require_once('class/class.php');
                     ?>
                         <a href="newsMoreinfo.php?id=<?php echo $row['id']; ?>">
                             <div class="news-card">
-                                <img src="admin/back/<?php echo $row['image'] ?>" alt="News 1">
+                                <img src="../admin/back/<?php echo $row['image'] ?>" alt="News 1">
                                 <div class="card-body">
                                     <h5><?php echo $row['title'] ?></h5>
                                 </div>
@@ -217,10 +217,10 @@ require_once('class/class.php');
     <!-- End Servcies -->
 
 
-<script src="assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 
     <?php
-    include 'includes/footer.php'
+    include '../includes/footer.php'
     ?>
 
 </body>
