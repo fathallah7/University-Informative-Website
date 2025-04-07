@@ -58,7 +58,7 @@
             <div class="container">
                 <div class="card-container">
                     <?php
-                    require_once('class/class.php');
+                    require_once('../class/class.php');
 
                     $rowData = Subscriber::ShowStaff();
                     while ($row = mysqli_fetch_assoc($rowData)) {
