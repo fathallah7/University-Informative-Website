@@ -59,7 +59,7 @@ if (isset($_POST['signIn'])) {
                 header("Location:../admin/index.php");
             }
             else {
-                header("Location:../index.php");
+                header("Location:../pages/index.php");
             }
 
         } 

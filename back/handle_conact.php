@@ -1,5 +1,5 @@
 <?php
-include '../pages/includes/conn.php';
+include '../includes/conn.php';
 session_start();
 ?>
 

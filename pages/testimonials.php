@@ -55,7 +55,7 @@ require_once('../class/class.php');
                 <div class="review-form">
                     <span class="close-form" onclick="closeReviewForm()">&times;</span>
                     <h3>Share Your Feedback</h3>
-                    <form action="back/handle_testimonials.php" method="post">
+                    <form action="../back/handle_testimonials.php" method="post">
                         <textarea name="content" placeholder="Write your review here..." required></textarea>
                         <button type="submit" name="send">Submit Review</button>
                     </form>

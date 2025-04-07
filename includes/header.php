@@ -57,7 +57,7 @@ if (isset($_SESSION['user'])) {
 {
 ?>
         <div class="icons">
-            <a href="login.php" class="user">
+            <a href="../login.php" class="user">
                 <i class="fa-solid fa-user"></i>
                 <span>Login</span>
             </a>

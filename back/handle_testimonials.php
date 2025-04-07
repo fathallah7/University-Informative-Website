@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['user'])) {
     $_SESSION['error'] = "Login First To Write Your Message";
-    header('Location:../testimonials.php');
+    header('Location:../pages/testimonials.php');
     exit();
 }
 
@@ -14,7 +14,7 @@ if (isset($_POST['send']) && !empty($_POST['content'])) {
 
     if ($done) {
         $_SESSION['msg'] = "Done Your Message Was Sent";
-        header("Location:../testimonials.php");
+        header("Location:../pages/testimonials.php");
     }
 }
 
