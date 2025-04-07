@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <!--========== File CSS =========-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <!--========== File BootStrap 5 ==========-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
     <!--========== Render Page ==========-->
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
 
     <!--=========== ICONS ===========-->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 
     <style>
-                .profile-container {
+            .profile-container {
             max-width: 800px;
             margin: auto;
             background: white;
@@ -60,10 +60,8 @@
 <body>
 
     <?php
-    include 'includes/header.php';
+    include '../includes/header.php';
     ?>
-
-
 
 
 
@@ -122,10 +120,10 @@
 
 
 
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
     <?php
-    include 'includes/footer.php'
+    include '../includes/footer.php'
     ?>
 
 </body>

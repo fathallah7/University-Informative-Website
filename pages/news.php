@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 
     <style>
@@ -25,8 +25,8 @@
 <body>
 
 <?php 
-include 'includes/header.php';
-require_once('class/class.php');
+include '../includes/header.php';
+require_once('../class/class.php');
 
 $categories = ['All', 'news', 'events', 'announcements'];
 $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
@@ -56,7 +56,7 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
         ?>
         <div class="col">
             <div class="card h-100">
-                <img src="admin/back/<?php echo $row['image']; ?>" class="card-img-top" alt="Article illustration">
+                <img src="../admin/back/<?php echo $row['image']; ?>" class="card-img-top" alt="Article illustration">
                 <div class="card-body">
                     <span class="category"> <?php echo $row['category']; ?> </span>
                     <p class="date">Published <?php echo $row['date']; ?></p>
@@ -75,10 +75,10 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
 </div>
 </section>
 
-<script src="assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 
 <?php 
-include 'includes/footer.php';
+include '../includes/footer.php';
 ?>
 
 </body>

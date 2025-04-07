@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Details</title>
-    <link rel="shortcut icon" href="assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
 
     <!-- Icons -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
@@ -18,13 +18,13 @@
 </head>
 
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include '../includes/header.php'; ?>
 
     <div class="container my-5">
         <div class="row">
             <div class="col-lg-12">
                 <?php
-                require_once('class/class.php');
+                require_once('../class/class.php');
                 if (isset($_GET['id'])) {
                     $postID = $_GET['id'];
                     $result = Subscriber::ShowPostsMoreInfo($postID);
@@ -32,7 +32,7 @@
                 ?>
 
                         <div class="card shadow-lg border-0 rounded-3 overflow-hidden">
-                            <img src="admin/back/<?php echo $row['image']; ?>" class="card-img-top img-fluid" alt="Article illustration" style="max-height: 400px; object-fit: cover;">
+                            <img src="../admin/back/<?php echo $row['image']; ?>" class="card-img-top img-fluid" alt="Article illustration" style="max-height: 400px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <span class="badge bg-primary mb-2"> <?php echo $row['category']; ?> </span>
                                 <p class="text-muted small mb-2"> <i class="fas fa-calendar-alt"></i> Published: <?php echo $row['date']; ?> </p>
@@ -60,8 +60,8 @@
         </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
-    <?php include 'includes/footer.php'; ?>
+    <script src="../assets/js/script.js"></script>
+    <?php include '../includes/footer.php'; ?>
 </body>
 
 </html>
