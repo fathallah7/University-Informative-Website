@@ -80,15 +80,15 @@
             </div>
             <hr>
             <h6>General Information</h6>
-            <form>
+            <form action="../back/handle_profile.php" method="post" enctype="multipart/form-data">
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" value="<?php echo $_SESSION['user_firstName']; ?>">
+                        <input type="text" name="firstName" class="form-control" value="<?php echo $_SESSION['user_firstName']; ?>">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Last Name</label>
-                        <input type="text" class="form-control" value="<?php echo $_SESSION['user_lastName']; ?>">
+                        <input type="text" name="lastName" class="form-control" value="<?php echo $_SESSION['user_lastName']; ?>">
                     </div>
 
                 </div>
@@ -96,8 +96,8 @@
                     <label class="form-label">Email</label>
                     <input type="email" class="form-control" value="<?php echo $_SESSION['user_email']; ?>">
                 </div>
-                <hr>
-                <h6>Change Password</h6>
+                <!-- <hr> -->
+                <!-- <h6>Change Password</h6>
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label">Old Password</label>
@@ -111,7 +111,7 @@
                 <div class="mb-3">
                     <label class="form-label">Confirm Password</label>
                     <input type="password" class="form-control">
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-custom w-100 text-white">Save</button>
             </form>
         </div>

@@ -56,6 +56,15 @@ class Subscriber extends User
     }
 
 
+    public function ProfileUpdate($id , $first_name , $last_name , $email , $image) {
+        require_once('../includes/conn.php');
+        $profileUpdate = "UPDATE `users` SET
+                            `firstName`='$first_name',`lastName`='$last_name',`email`='$email',`image`='$image'
+                                WHERE `id`='$id' ";
+        $profileResult = mysqli_query($conn , $profileUpdate);
+        return $profileResult;
+    }
+
 
     public function ShowPosts() {
         require_once('../includes/conn.php');
