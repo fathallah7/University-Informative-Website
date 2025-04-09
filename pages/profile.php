@@ -65,11 +65,10 @@
 
 
 
-
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
         <div class="profile-container">
             <div class="profile-header">
-                <img src="<?php echo $_SESSION['user_image'];?>" alt="Profile Picture" class="profile-img">
+                <img src="../<?php echo $_SESSION['user_image'];?>" alt="Profile Picture" class="profile-img">
                 <div>
                     <h5> <?php echo $_SESSION['user_firstName'] . " " . $_SESSION['user_lastName'] ; ?> </h5>
                     <small class="text-muted">Account Created: 2024-12-18 12:32:41</small>

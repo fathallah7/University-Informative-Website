@@ -9,7 +9,7 @@ abstract class User
     public $role = "subscriber";
     public $password;
 
-    function __construct($id, $name, $email, $password)
+    function __construct($id = null, $name = null, $email = null, $password = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -59,14 +59,14 @@ class Subscriber extends User
 
 
 
-    public static function ShowPosts() {
+    public function ShowPosts() {
         require_once('../includes/conn.php');
         $posts = "SELECT * FROM `posts`";
         $postsResult = mysqli_query($conn , $posts);
         return $postsResult;
     }
 
-    public static function ShowPostsMoreInfo($id) {
+    public function ShowPostsMoreInfo($id) {
         require_once('../includes/conn.php');
         $postsMoreInfo = "SELECT * FROM `posts` WHERE `id` = $id";
         $postsMoreInfoResult = mysqli_query($conn , $postsMoreInfo);
@@ -75,7 +75,7 @@ class Subscriber extends User
 
 
 
-    public static function ShowStaff() {
+    public function ShowStaff() {
         require_once('../includes/conn.php');
         // global $conn;
         $staff = "SELECT * FROM `staff`";

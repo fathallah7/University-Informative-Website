@@ -27,7 +27,10 @@
                 require_once('../class/class.php');
                 if (isset($_GET['id'])) {
                     $postID = $_GET['id'];
-                    $result = Subscriber::ShowPostsMoreInfo($postID);
+
+                    $subscriber = new Subscriber();
+                    $result = $subscriber->ShowPostsMoreInfo($postID);
+
                     if ($row = mysqli_fetch_assoc($result)) {
                 ?>
 

@@ -49,7 +49,9 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'All';
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php
-        $rowData = Subscriber::ShowPosts();
+        $subscriber = new Subscriber();
+        $rowData = $subscriber->ShowPosts();
+
         while ($row = mysqli_fetch_assoc($rowData)) {
             if ($selectedCategory == 'All' || $row['category'] == $selectedCategory) {
                 $excerpt = mb_substr($row['content'], 0, 150, 'UTF-8') . '...';

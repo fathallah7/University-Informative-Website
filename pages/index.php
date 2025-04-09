@@ -155,7 +155,10 @@ require_once('../class/class.php');
             <div class="news-section">
                 <div class="news-container" id="newsContainer">
                     <?php
-                    $rowData = Subscriber::ShowPosts();
+
+                    $subscriber = new Subscriber();
+                    $rowData = $subscriber->ShowPosts();
+
                     while ($row = mysqli_fetch_assoc($rowData)) {
                     ?>
                         <a href="newsMoreinfo.php?id=<?php echo $row['id']; ?>">

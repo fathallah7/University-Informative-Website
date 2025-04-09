@@ -60,7 +60,9 @@
                     <?php
                     require_once('../class/class.php');
 
-                    $rowData = Subscriber::ShowStaff();
+                    $subscriber = new Subscriber();
+                    $rowData = $subscriber->ShowStaff();
+                    
                     while ($row = mysqli_fetch_assoc($rowData)) {
                         if ($row['category'] == "Software") {
                     ?>
