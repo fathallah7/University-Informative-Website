@@ -67,7 +67,10 @@ require_once('../class/class.php');
             <div class="reviews-grid" id="card">
                     <?php 
                         require_once('../class/class.php');
-                        $rowData = Subscriber::ShowTestimonials();
+                        
+                        $subscriber = new Subscriber();
+                        $rowData = $subscriber->ShowTestimonials();
+
                         while ($row = mysqli_fetch_assoc($rowData)) {
                     ?>
                     <div class="review-card">

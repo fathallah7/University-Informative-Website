@@ -10,7 +10,9 @@ if (!isset($_SESSION['user'])) {
 if (isset($_POST['send']) && !empty($_POST['content'])) {
     $content = $_POST['content'];
     require_once("../class/class.php");
-    $done = Subscriber::AddTestimonials($_SESSION['user_id'] , $_SESSION['user_email'] , $content);
+    
+    $subscriber = new Subscriber();
+    $done = $subscriber->AddTestimonials($_SESSION['user_id'] , $_SESSION['user_email'] , $content);
 
     if ($done) {
         $_SESSION['msg'] = "Done Your Message Was Sent";

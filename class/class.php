@@ -85,7 +85,7 @@ class Subscriber extends User
 
 
 
-    public static function AddTestimonials($userId , $userEmail , $content) {
+    public function AddTestimonials($userId , $userEmail , $content) {
         require_once('../includes/conn.php');
         $addTestimonials = "INSERT INTO `testimonials`(`user_id`, `user_email`, `content`)
                                 VALUES ('$userId','$userEmail','$content')";
@@ -93,7 +93,7 @@ class Subscriber extends User
         return $addTestimonialsResult;
     }
 
-    public static function ShowTestimonials() {
+    public function ShowTestimonials() {
         require_once('../includes/conn.php');
         $showTestimonials = "SELECT testimonials.*, users.firstName, users.lastName , users.image
                             FROM testimonials 
