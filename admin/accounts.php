@@ -63,6 +63,9 @@ session_start();
                             <h3><b>ID</b></h3>
                         </th>
                         <th>
+                            <h3><b>Photo</b></h3>
+                        </th>
+                        <th>
                             <h3><b>Name</b></h3>
                         </th>
                         <th>
@@ -81,15 +84,22 @@ session_start();
                     <!-------------------------------------------START READ DATA----------------------------------------------->
                     <?php
                     require_once('../class/class.php');
-                    $rowData = Admin::ShowAccounts();
+
+                    $admin = new Admin();
+                    $rowData = $admin->ShowAccounts();
+
                     while ($row = mysqli_fetch_assoc($rowData)) {
+                        if ($row['role'] == "subscriber") {
                     ?>
                         <tr>
                             <td>
                                 <h4> <?php echo $row['id']; ?> </h4>
                             </td>
                             <td>
-                                <h4> <?php echo $row['firstName']; ?> </h4>
+                            <img src="../<?php echo $row['image']; ?>" alt="" class="avatar" width="50px"> 
+                            </td>
+                            <td>
+                                <h4> <?php echo $row['firstName'] ." ". $row['firstName'] ; ?> </h4>
                             </td>
                             <td>
                                 <h4> <?php echo $row['email']; ?> </h4>
@@ -101,6 +111,7 @@ session_start();
                         </tr>
                     <?php
                     }
+                }
                     ?>
                     <!-------------------------------------------END READ DATA----------------------------------------------->
                 </tbody>

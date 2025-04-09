@@ -4,7 +4,8 @@ require_once('../../class/class.php');
 
 $id = $_GET['id'];
 
-$doneDeleted  =  Admin::DeleteAccounts($id);
+$admin = new Admin();
+$doneDeleted  =  $admin->DeleteAccounts($id);
 
 if ($doneDeleted) {
     $_SESSION['msg'] = "An Account Deleted";

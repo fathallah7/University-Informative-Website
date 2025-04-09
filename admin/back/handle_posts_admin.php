@@ -67,7 +67,9 @@ if (isset($_POST['update'])) {
     $titleUpdate = $_POST['titleUpdate'];
     $contentUpdate = $_POST['contentUpdate'];
 
-    $updateResult = Admin::UpdatePosts($id , $titleUpdate , $contentUpdate);
+    $admin = new Admin();
+    $updateResult = $admin->UpdatePosts($id , $titleUpdate , $contentUpdate);
+
     if ($updateResult) {
         $_SESSION['msg'] = "The Post Updated";
         header("Location:../posts.php");
@@ -88,7 +90,9 @@ if (isset($_POST['update'])) {
 <?php 
 
 $id = $_GET['id'];
-$doneDeleted = Admin::DeletePosts($id);
+
+$admin = new Admin();
+$doneDeleted = $admin->DeletePosts($id);
 
 if ($doneDeleted) {
     $_SESSION['msg'] = "An Post Deleted";

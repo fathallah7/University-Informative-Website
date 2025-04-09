@@ -53,7 +53,9 @@ if (isset($_POST['submit'])) {
 <?php 
 
 $id = $_GET['id'];
-$doneDeleted = Admin::DeleteStaff($id);
+
+$admin = new Admin();
+$doneDeleted = $admin->DeleteStaff($id);
 
 if ($doneDeleted) {
     $_SESSION['msg'] = "An Staff Deleted";

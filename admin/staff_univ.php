@@ -134,7 +134,10 @@ session_start();
                     <!-------------------------------------------START READ DATA----------------------------------------------->
                     <?php
                     require_once('../class/class.php');
-                    $rowData = Admin::ShowStaff();
+
+                    $admin = new Admin();
+                    $rowData = $admin->ShowStaff();
+
                     while ($row = mysqli_fetch_assoc($rowData)) {
                     ?>
                         <tr>

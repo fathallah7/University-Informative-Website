@@ -1,7 +1,6 @@
 <?php 
 
-abstract class User
-{
+abstract class User {
 
     public $id;
     public $name;
@@ -30,7 +29,6 @@ abstract class User
             return false;
         }
     }
-
 
 }
 
@@ -114,14 +112,14 @@ class Subscriber extends User
 class Admin extends User {
 
 
-        public static function ShowAccounts() {
+        public function ShowAccounts() {
             require_once('../includes/conn.php');
             $accounts = "SELECT * FROM `users` ";
             $accountsResult = mysqli_query($conn , $accounts);
             return $accountsResult;
         }
 
-        public static function DeleteAccounts($id) {
+        public function DeleteAccounts($id) {
             require_once('../includes/conn.php');
             $delete = " DELETE FROM `users` WHERE `id` = $id ";
             $accountDelete = mysqli_query($conn , $delete);
@@ -138,14 +136,14 @@ class Admin extends User {
             return $addPostResult;
         }
 
-        public static function ShowPosts() {
+        public function ShowPosts() {
             require_once('includes/conn.php');
             $posts = "SELECT * FROM `posts`";
             $postsResult = mysqli_query($conn , $posts);
             return $postsResult;
         }
 
-        public static function UpdatePosts($id , $title  , $content) {
+        public function UpdatePosts($id , $title  , $content) {
             require_once('../includes/conn.php');
             $updatePost = "UPDATE `posts` SET `title`='$title', `content`='$content' 
                 WHERE `id` = '$id' ";
@@ -153,7 +151,7 @@ class Admin extends User {
             return $updatePostResult;
         }
 
-        public static function DeletePosts($id) {
+        public function DeletePosts($id) {
             require_once('../includes/conn.php');
             $DeletePosts = "DELETE FROM `posts` WHERE `id` = $id";
             $DeletePostsResult = mysqli_query($conn , $DeletePosts);
@@ -172,14 +170,14 @@ class Admin extends User {
             return $staffResult;
         }
 
-        public static function ShowStaff() {
+        public function ShowStaff() {
             require_once('includes/conn.php');
             $staff = "SELECT * FROM `staff`";
             $staffResult = mysqli_query($conn , $staff);
             return $staffResult;
         }
 
-        public static function DeleteStaff($id) {
+        public function DeleteStaff($id) {
             require_once('../includes/conn.php');
             $DeleteStaff = "DELETE FROM `staff` WHERE `id` = $id";
             $DeleteStaffResult = mysqli_query($conn , $DeleteStaff);

@@ -130,7 +130,10 @@ session_start();
                     <!-------------------------------------------START READ DATA----------------------------------------------->
                     <?php
                     require_once('../class/class.php');
-                    $rowData = Admin::ShowPosts();
+
+                    $admin = new Admin();
+                    $rowData = $admin->ShowPosts();
+                    
                     while ($row = mysqli_fetch_assoc($rowData)) {
                     ?>
                         <tr>
