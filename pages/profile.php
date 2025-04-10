@@ -61,6 +61,7 @@
 
     <?php
     include '../includes/header.php';
+    include '../includes/msg.php';
     ?>
 
 
@@ -68,19 +69,22 @@
 <div class="container mt-5 mb-5">
         <div class="profile-container">
             <div class="profile-header">
-                <img src="../<?php echo $_SESSION['user_image'];?>" alt="Profile Picture" class="profile-img">
+                <img src="../back/<?php echo $_SESSION['user_image'];?>" alt="Profile Picture" class="profile-img">
                 <div>
                     <h5> <?php echo $_SESSION['user_firstName'] . " " . $_SESSION['user_lastName'] ; ?> </h5>
                     <small class="text-muted">Account Created: 2024-12-18 12:32:41</small>
                 </div>
             </div>
+            <!-- <h6>General Information</h6> -->
+            <hr>
+
+            <form action="../back/handle_profile.php" method="post" enctype="multipart/form-data">
+
             <div class="mt-3">
                 <label class="form-label">Change Profile Picture</label>
-                <input type="file" class="form-control">
+                <input type="file" name="image" class="form-control">
             </div>
-            <hr>
-            <h6>General Information</h6>
-            <form action="../back/handle_profile.php" method="post" enctype="multipart/form-data">
+
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label">First Name</label>
@@ -90,11 +94,10 @@
                         <label class="form-label">Last Name</label>
                         <input type="text" name="lastName" class="form-control" value="<?php echo $_SESSION['user_lastName']; ?>">
                     </div>
-
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" value="<?php echo $_SESSION['user_email']; ?>">
+                    <input type="email" name="email" class="form-control" value="<?php echo $_SESSION['user_email']; ?>">
                 </div>
                 <!-- <hr> -->
                 <!-- <h6>Change Password</h6>
@@ -112,7 +115,7 @@
                     <label class="form-label">Confirm Password</label>
                     <input type="password" class="form-control">
                 </div> -->
-                <button type="submit" class="btn btn-custom w-100 text-white">Save</button>
+                <button type="submit" name="submit" class="btn btn-custom w-100 text-white">Save</button>
             </form>
         </div>
     </div>
