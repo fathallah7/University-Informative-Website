@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         if (!empty($_FILES['image']['name'])) {
         $imageName = $_FILES['image']['name'];
         $imageTmpName = $_FILES['image']['tmp_name'];
-        $uploadDir = 'uploads/posts/';
+        $uploadDir = 'uploads/profile/';
         $imagePath = $uploadDir . basename($imageName);
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);

@@ -92,10 +92,10 @@ class Subscriber extends User
 
 
 
-    public function AddTestimonials($userId , $userEmail , $content) {
+    public function AddTestimonials($userId , $userEmail , $content , $rating) {
         require_once('../includes/conn.php');
-        $addTestimonials = "INSERT INTO `testimonials`(`user_id`, `user_email`, `content`)
-                                VALUES ('$userId','$userEmail','$content')";
+        $addTestimonials = "INSERT INTO `testimonials`(`user_id`, `user_email`, `content` , `rating`)
+                                VALUES ('$userId','$userEmail','$content' , '$rating')";
         $addTestimonialsResult = mysqli_query($conn , $addTestimonials);
         return $addTestimonialsResult;
     }

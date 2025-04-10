@@ -15,22 +15,20 @@
     <title>Home</title>
 
     <style>
-
         body {
             background-color: #f4f4f4;
         }
-
     </style>
 
 </head>
 
 <body>
 
-<?php 
-include '../includes/header.php';
-include '../includes/msg.php';
-require_once('../class/class.php');
-?>
+    <?php
+    include '../includes/header.php';
+    include '../includes/msg.php';
+    require_once('../class/class.php');
+    ?>
 
 
     <!-- --------------------------------------------------------------------------------------- -->
@@ -57,33 +55,43 @@ require_once('../class/class.php');
                     <h3>Share Your Feedback</h3>
                     <form action="../back/handle_testimonials.php" method="post">
                         <textarea name="content" placeholder="Write your review here..." required></textarea>
+
+                        <div class="rating">
+                            <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+                            <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+                            <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+                            <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                            <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                        </div>
+
                         <button type="submit" name="send">Submit Review</button>
                     </form>
-                </div> 
+                </div>
             </div>
 
 
             <!-- Reviews Grid -->
             <div class="reviews-grid" id="card">
-                    <?php 
-                        require_once('../class/class.php');
-                        
-                        $subscriber = new Subscriber();
-                        $rowData = $subscriber->ShowTestimonials();
+                <?php
+                require_once('../class/class.php');
 
-                        while ($row = mysqli_fetch_assoc($rowData)) {
-                    ?>
+                $subscriber = new Subscriber();
+                $rowData = $subscriber->ShowTestimonials();
+
+                while ($row = mysqli_fetch_assoc($rowData)) {
+                ?>
                     <div class="review-card">
                         <div class="review-header">
-                            <img src="../<?php echo $row['image'] ?>" alt="User">
+                            <img src="../back/<?php echo $row['image'] ?>" alt="User">
                             <div class="reviewer-info">
                                 <h4><?php echo $row['firstName'] . " " . $row['lastName'] ?></h4>
                                 <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                    <?php
+                                    $rating = $row['rating']; 
+                                    for ($i = 1; $i <= 5; $i++) {
+                                        echo ($i <= $rating) ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +99,7 @@ require_once('../class/class.php');
                             <?php echo $row['content'] ?>
                         </div>
                     </div>
-                    <?php } ?>
+                <?php } ?>
 
 
             </div>
@@ -106,11 +114,11 @@ require_once('../class/class.php');
 
 
 
-        <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
-<?php 
-include '../includes/footer.php';
-?>
+    <?php
+    include '../includes/footer.php';
+    ?>
 
 </body>
 
