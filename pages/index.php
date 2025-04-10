@@ -37,7 +37,6 @@ require_once('../class/class.php');
 
     .news-section {
         text-align: center;
-        padding: 40px 20px;
     }
 
     .news-container {
@@ -130,26 +129,47 @@ require_once('../class/class.php');
 
 
 
-    <!-- Start About -->
-    <section class="about-section" id="about">
-        <h2 class="section-title">About us</h2>
-        <div class="container">
-            <div class="about-data">
-                <h2 class="about-title">Borg Al-Arab<br>Library </h2>
-                <p class="about-description">Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey. At Borg El Arab University, we are committed to fostering knowledge and innovation for all learners.
-                    .</p>
-                <a href="#services" class="button">Our Services</a>
+<!-- Start About -->
+<section class="about-section" id="about">
+    <div class="section"> 
+    <div class="container">
+        <h2 class="section-title">Discover Our Library</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="about-title">Borg Al-Arab <span>University Library</span></h2>
+                <div class="about-description">
+                    <p>Welcome to the Borg El Arab University Library, your premier academic resource center offering:</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Comprehensive collection of books and research papers</li>
+                        <li><i class="fas fa-check-circle"></i> State-of-the-art digital resources</li>
+                        <li><i class="fas fa-check-circle"></i> Collaborative learning spaces</li>
+                        <li><i class="fas fa-check-circle"></i> Expert research support</li>
+                    </ul>
+                    <p>We serve both new students and seasoned academics with resources designed to empower your educational journey and foster innovation.</p>
+                </div>
+                <div class="about-actions">
+                    <a href="#services" class="btn btn-primary">
+                        <i class="fas fa-book-open mr-2"></i> Our Services
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Visit Us
+                    </a>
+                </div>
             </div>
-            <div>
-                <img src="../assets/imgs/log.png" alt="" class="about-img" width="500px">
+            <div class="about-image">
+                <img src="../assets/imgs/log.png" alt="Borg Al-Arab University Library" class="library-image">
+                <div class="image-overlay"></div>
             </div>
         </div>
-    </section>
-    <!-- End About -->
+    </div>
+    </div>
+</section>
+<!-- End About -->
 
 
     <!-- Start News -->
     <section class="news-section">
+    <div class="section"> 
         <h2 class="section-title">Recent News</h2>
         <div class="container">
             <div class="news-section">
@@ -175,12 +195,14 @@ require_once('../class/class.php');
                 <button class="btn btn-outline-primary see-more-btn"><a href="news.php">See More ➜</a></button>
             </div>
         </div>
+        </div>
     </section>
     <!-- End News -->
 
 
     <!-- Start Services -->
     <div class="services" id="services">
+    <div class="section"> 
         <div>
             <h2 class="section-title"> Our Programs </h2>
         </div>
@@ -215,6 +237,7 @@ require_once('../class/class.php');
                     </div>
                 </a>
             </div>
+        </div>
         </div>
     </div>
     <!-- End Servcies -->
