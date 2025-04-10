@@ -1002,6 +1002,26 @@ a {
     background: #2a4b54;
 }
 
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating input[type="radio"]:checked ~ label,
+.rating input[type="radio"]:hover ~ label {
+    color: gold;
+}
+
+.rating input[type="radio"]:checked {
+    color: gold;
+}
+
 @media (max-width: 768px) {
     .section-header h2 {
         font-size: 28px;
