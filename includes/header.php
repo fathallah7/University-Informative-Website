@@ -47,11 +47,15 @@ if (isset($_SESSION['user'])) {
         <div class="icons">
             <a href="profile.php" class="user">
             <i class="fa-solid fa-user"></i>
-                <span>Profile</span>
+                <!-- <span>Profile</span> -->
+            </a>
+            <a href="cart.php" class="user">
+            <i class="fa-solid fa-cart-shopping"></i>
+                <!-- <span>Cart</span> -->
             </a>
             <a href="../back/handle_logout.php" class="user">
-            <i class='bx bx-log-out' ></i>
-                <span>Logout</span>
+            <i class="fa-solid fa-right-from-bracket"></i>
+                <!-- <span>Logout</span> -->
             </a>
         </div>
 <?php 
