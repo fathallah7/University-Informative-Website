@@ -81,6 +81,13 @@ class Subscriber extends User
     }
 
 
+    public function ShowBooks() {
+        require_once('../includes/conn.php');
+        $books = "SELECT * FROM `library`";
+        $booksResult = mysqli_query($conn , $books);
+        return $booksResult;
+    }
+
 
     public function ShowStaff() {
         require_once('../includes/conn.php');
