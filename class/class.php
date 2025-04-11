@@ -169,6 +169,38 @@ class Admin extends User {
 
 
 
+        public function AddBook( $title , $price , $status , $imagePath ) {
+            global $conn;
+            require_once('../includes/conn.php');
+            $addBook = "INSERT INTO `library`(`title`, `price`, `status`, `image`)
+                            VALUES ('$title', '$price','$status','$imagePath')";
+            $addBookResult = mysqli_query($conn , $addBook);
+            return $addBookResult;
+        }
+
+        public function ShowBooks() {
+            require_once('includes/conn.php');
+            $books = "SELECT * FROM `library`";
+            $booksResult = mysqli_query($conn , $books);
+            return $booksResult;
+        }
+
+        public function UpdateBooks($id , $title  , $price , $status) {
+            require_once('../includes/conn.php');
+            $updateBook = "UPDATE `library` SET `title`='$title', `price`='$price' , `status` = '$status' 
+                WHERE `id` = '$id' ";
+                $updateBookResult = mysqli_query($conn , $updateBook);
+            return $updateBookResult;
+        }
+
+        public function DeleteBooks($id) {
+            require_once('../includes/conn.php');
+            $DeleteBook = "DELETE FROM `library` WHERE `id` = $id";
+            $DeleteBookResult = mysqli_query($conn , $DeleteBook);
+            return $DeleteBookResult;
+        }
+
+
 
 
         public static function AddStaff($name , $category , $imagePath , $cv = null) {
