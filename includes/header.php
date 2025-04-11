@@ -33,8 +33,10 @@ session_start();
             <ul>
                 <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="news.php" >News</a></li>
+                <li><a href="library.php" >Library</a></li>
                 <li><a href="staff.php" >Staff</a></li>
                 <li><a href="testimonials.php" >Testimonials</a></li>
+                <li><a href="testimonials.php" >LMS</a></li>
                 <li><a href="contact.php" >Contact</a></li>
             </ul>
         </nav>
