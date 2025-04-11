@@ -157,7 +157,7 @@ session_start();
                             </td>
                             <td>
                             <a href="back/handle_library_admin.php?id=<?php echo $row['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a> 
-                            <a href="back/handle_library_admin.php?id_update=<?php echo $row['id']; ?>"><i style="color:rgb(12, 173, 0); " class='bx bx-edit-alt'></i></a>
+                            <a href="back/handle_library_admin.php?book_id_update=<?php echo $row['id']; ?>"><i style="color:rgb(12, 173, 0); " class='bx bx-edit-alt'></i></a>
                             </td>
                         </tr>
                     <?php

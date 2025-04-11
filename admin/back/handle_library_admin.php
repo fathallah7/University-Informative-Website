@@ -56,28 +56,28 @@ if (isset($_POST['submit'])) {
 <!-- Update Post -->
 
 <?php 
-// if (isset($_GET['id_update'])) {
-//     $_SESSION['id_update'] = $_GET['id_update'];
-//     header("Location:../postsUpdate.php");
-//     exit();
-// }
+if (isset($_GET['book_id_update'])) {
+    $_SESSION['book_id_update'] = $_GET['book_id_update'];
+    header("Location:../libraryUpdate.php");
+    exit();
+}
 
-// if (isset($_POST['update'])) {
-//     $id = $_POST['id'];
-//     $titleUpdate = $_POST['titleUpdate'];
-//     $contentUpdate = $_POST['contentUpdate'];
+if (isset($_POST['update'])) {
+    $titleUpdate = $_POST['titleUpdate'];
+    $priceUpdate = $_POST['priceUpdate'];
+    $statusUpdate = $_POST['statusUpdate'];
 
-//     $admin = new Admin();
-//     $updateResult = $admin->UpdatePosts($id , $titleUpdate , $contentUpdate);
+    $admin = new Admin();
+    $updateResult = $admin->UpdateBooks($_SESSION['book_id_update'] , $titleUpdate , $priceUpdate , $statusUpdate);
 
-//     if ($updateResult) {
-//         $_SESSION['msg'] = "The Post Updated";
-//         header("Location:../posts.php");
-//     }
-//     else {
-//         $_SESSION['error'] = "An Error";
-//     }
-// }
+    if ($updateResult) {
+        $_SESSION['msg'] = "The Book Updated";
+        header("Location:../library.php");
+    }
+    else {
+        $_SESSION['error'] = "An Error";
+    }
+}
 ?>
 
 <!-- Update Post -->
