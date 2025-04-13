@@ -26,6 +26,7 @@
 
 <?php 
 include '../includes/header.php';
+include '../includes/msg.php';
 require_once('../class/class.php');
 ?>
 
@@ -46,7 +47,7 @@ require_once('../class/class.php');
     <h3 class="menu-name"><?php echo $row['title']; ?></h3>
     <span class="menu-detail"><?php echo $row['status']; ?></span>
     <span class="menu-price"><?php echo $row['price']; ?>$</span>
-    <a href="#menu" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+    <a href="../back/handle_library.php?book_id=<?php echo $row['id'] ?>" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
 </div>
 <?php } ?>
 

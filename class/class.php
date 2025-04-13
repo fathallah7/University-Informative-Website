@@ -88,6 +88,37 @@ class Subscriber extends User
     }
 
 
+
+    public static function BuyBook($book_id)
+    {
+        require('../includes/conn.php');
+        session_start();
+        if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])) {
+            $_SESSION['msg'] = "You must be logged in to add a book to your cart.";
+            header('Location: ../pages/library.php');
+            exit();
+        }
+
+        $user_id = $_SESSION['user_id'];
+        $user_email = $_SESSION['user_email'];
+
+        $check_query = "SELECT * FROM cart WHERE user_id = '$user_id' AND book_id = '$book_id'";
+        $result = mysqli_query($conn , $check_query);
+
+        if ($result->num_rows > 0) {
+            $update_query = "UPDATE cart SET quantity = quantity + 1 WHERE user_id = '$user_id' AND book_id = '$book_id'";
+            $conn->query($update_query);
+        } else {
+            $insert_query = "INSERT INTO cart (user_id, email, book_id) VALUES ('$user_id', '$user_email', '$book_id')";
+            $conn->query($insert_query);
+        }
+
+        $_SESSION['msg'] = "A book has been added to your cart.";
+    }
+
+
+
+
     public function ShowStaff() {
         require_once('../includes/conn.php');
         // global $conn;
