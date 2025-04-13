@@ -49,7 +49,6 @@ class Subscriber extends User
         else {
             $sql = "INSERT INTO `users`( `firstName`, `lastName` , `email`, `password`) 
             VALUES ('$first_name' , '$last_name' , '$email' , '$password')";
-        require_once('../includes/conn.php');
         $result = mysqli_query($conn, $sql);
         return $result;
     }
