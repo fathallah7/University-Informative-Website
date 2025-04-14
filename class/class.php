@@ -117,6 +117,28 @@ class Subscriber extends User
     }
 
 
+    public static function Cart()
+    {
+        require_once('../includes/conn.php');
+        $user_id = $_SESSION['user_id'];
+        $cart = "SELECT cart.*, library.title, library.price, library.image 
+                FROM cart 
+                JOIN library ON cart.book_id = library.id 
+                WHERE cart.user_id = $user_id";
+        if ( $resultCart = mysqli_query($conn , $cart) ) {
+            return $resultCart;
+        }
+        }
+
+
+    public static function RemoveFromCart($id)
+    {
+        require_once('../includes/conn.php');
+        $delete = " DELETE FROM `cart` WHERE `id` = $id ";
+        $cartDelete = mysqli_query($conn , $delete);
+        return $cartDelete;
+        }
+
 
 
     public function ShowStaff() {
