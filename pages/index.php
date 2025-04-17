@@ -215,18 +215,18 @@ require_once('../class/class.php');
                         <p>Development, programming, databases, security, applications, frameworks, testing.</p>
                     </div>
                 </a>
-                <a href="networking-program.php" class="box-link">
-                    <div class="box">
-                        <i class="fa-solid fa-network-wired"></i>
-                        <h2>Networking</h2>
-                        <p>Protocols, security, cloud, infrastructure, administration, routing, wireless.</p>
-                    </div>
-                </a>
                 <a href="ai-program.php" class="box-link">
                     <div class="box">
                     <i class="fa-solid fa-robot"></i>
                         <h2>AI</h2>
                         <p>Machine learning, deep learning, automation, algorithms, data science, robotics, NLP.</p>
+                    </div>
+                </a>
+                <a href="networking-program.php" class="box-link">
+                    <div class="box">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h2>Networking</h2>
+                        <p>Protocols, security, cloud, infrastructure, administration, routing, wireless.</p>
                     </div>
                 </a>
                 <a href="communication-program.php" class="box-link">
