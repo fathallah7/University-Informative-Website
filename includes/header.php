@@ -31,7 +31,7 @@ session_start();
         <nav>
             <i class="fa-solid fa-bars toggle-menu"></i>
             <ul>
-                <li><a href="index.php" class="active">Home</a></li>
+                <li><a href="index.php" class="">Home</a></li>
                 <li><a href="news.php" >News</a></li>
                 <li><a href="library.php" >Library</a></li>
                 <li><a href="staff.php" >Staff</a></li>

@@ -211,7 +211,7 @@ a {
     border: 1px solid rgba(255,255,255,0.2);
 }
 .header-top .container .infor a:hover {
-    background: var(--main-color);
+    background: white;
     color: var(--main2-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -312,8 +312,8 @@ a {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--main-color);
-    transition: width 0.3s ease;
+    background: white;
+    transition: width 0.2s ease;
 }
 .header-bottom .container nav ul a:hover::after,
 .header-bottom .container nav ul a.active::after {
@@ -331,10 +331,6 @@ a {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-.header-bottom .container .icons a:hover {
-    color: var(--main-color);
-    transform: translateY(-2px);
 }
 
 /* Start Responsive */
@@ -355,7 +351,6 @@ a {
     .header-bottom .container nav ul {
         display: none;
     }
-    
     }
 
 /* End Header-bottom */
@@ -521,8 +516,8 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('../imgs/wall2.jpg') no-repeat center center/cover;
-    filter: blur(5px) ;
+    background: url('../imgs/college2.png') no-repeat center center/cover;
+    /* filter: blur(5px) ; */
     transform: scale(1.1);
     z-index: 1; 
 }
@@ -981,7 +976,6 @@ a {
         justify-content: center;
 }
 
-
 .menu-card {
 position: relative;
 display: flex;
@@ -990,31 +984,24 @@ background-color: #ffffff;
 border-radius: 0.7rem;
 box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
 padding: 0.5rem;
-transition: 0.5s;
 }
-.menu-card:hover {
-    transform: translateY(-30px);
-}
-
 
 .menu__img {  
 width: 85px;
+border-radius: 5px;
 align-self: center;
 margin-bottom: 1rem;
-
 transition: 0.5s;
 }
 .menu__img:hover {
     transform: translateY(-30px);
 }
 
-
 .menu-name {
-font-size: 15px;
+font-size: 17px;
 font-weight: 600;
 color: #000000;
 }
-
 
 .menu-detail {
 margin-bottom: 0.5rem;
@@ -1023,11 +1010,10 @@ color: rgb(163, 163, 163);
 }
 
 .menu-price {
-    font-weight: 600;
+    font-weight: 70;
     color: #000000;
-    font-size: 13px;
+    font-size: 15px;
     }
-
 
 .menu__button {
 position: absolute;
@@ -1036,23 +1022,9 @@ color: #ffffff;
 bottom: 0;
 right: 0;
 display: flex;
-padding: 0.5rem 0.813rem;
+padding: 0.7rem 1.2rem;
 border-radius: 0.5rem 0 0.5rem 0;
 text-decoration: none;
-}
-
-.menu-more {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-.menu-more-button {
-    text-decoration: none;
-    background-color: var(--main2-color);
-    color: white;
-    padding: 8px 20px;
-    border: #069C54;
-    border-radius: 20px;
 }
 
 /*===== For PC =====*/
