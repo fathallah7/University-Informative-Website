@@ -9,11 +9,10 @@ if (isset($_GET['book_id'])) {
 
     $bookAdded = Subscriber::BuyBook($book_id);
     
-    if ($bookAdded) {
+
         $_SESSION['msg'] = "The Book Added To The Cart";
         header("Location:../pages/library.php");
         exit();
-    }
 
 }
 
@@ -22,11 +21,10 @@ if (isset($_GET['id_del'])) {
     $bookDelete_id = $_GET['id_del'];
 
     $bookDelete = Subscriber::RemoveFromCart($bookDelete_id);
-    
-    if ($bookDelete) {
+
         $_SESSION['error'] = "The Book Deleted From the Cart";
         header('Location:../pages/cart.php');
         exit();
-    }
+
 
 }

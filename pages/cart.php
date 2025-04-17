@@ -27,20 +27,14 @@ require_once('../class/class.php');
     <title>Home</title>
 </head>
 
-
-<style>
-
-</style>
-
-
 <body>
-
-
-<div class="cart-container">
 
 <?php 
     include '../includes/msg.php';
 ?>
+
+<div class="cart-container">
+
     <h1 class="section-title">Shopping Cart</h1>
 
     <?php
