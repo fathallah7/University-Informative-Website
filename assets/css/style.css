@@ -643,7 +643,7 @@ a {
 .about-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--main2-color);
     margin-bottom: 25px;
     line-height: 1.2;
 }
@@ -701,9 +701,9 @@ a {
 }
 
 .btn-primary {
-    background-color: #3498db;
+    background-color: var(--main2-color);
     color: white;
-    border: 2px solid #3498db;
+    border: 2px solid var(--main2-color);
 }
 
 .btn-primary:hover {
@@ -729,24 +729,13 @@ a {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); */
 }
 
 .library-image {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.1) 100%);
-    z-index: 1;
 }
 
 /* Responsive Design */
@@ -918,17 +907,6 @@ a {
     color: #1e1e2f;
 }
 
-.program-details-heading {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.program-details-heading span {
-    color: #0066ff;
-}
-
 .program-details-description {
     font-size: 16px;
     color: #333;
@@ -939,7 +917,7 @@ a {
 .program-details-button {
     display: inline-block;
     padding: 14px 28px;
-    background: #0066ff;
+    background: var(--main2-color);
     color: #fff;
     border-radius: 12px;
     font-weight: 600;
@@ -948,9 +926,9 @@ a {
 }
 
 .program-details-button:hover {
-    background: #004fcc;
+    background: #002664;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 63, 158, 0.3);
 }
 
 .program-details-image-wrapper {

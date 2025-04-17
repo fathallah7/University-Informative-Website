@@ -148,7 +148,7 @@ require_once('../class/class.php');
                     <p>We serve both new students and seasoned academics with resources designed to empower your educational journey and foster innovation.</p>
                 </div>
                 <div class="about-actions">
-                    <a href="#services" class="btn btn-primary">
+                    <a href="#services" class="btn btn-primary" style="background-color: #3C6A77;">
                         <i class="fas fa-book-open mr-2"></i> Our Services
                     </a>
                     <a href="#" class="btn btn-outline">
@@ -158,7 +158,6 @@ require_once('../class/class.php');
             </div>
             <div class="about-image">
                 <img src="../assets/imgs/log.png" alt="Borg Al-Arab University Library" class="library-image">
-                <div class="image-overlay"></div>
             </div>
         </div>
     </div>
