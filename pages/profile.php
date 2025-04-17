@@ -22,7 +22,7 @@
     <title>Home</title>
 
     <style>
-            .profile-container {
+        .profile-container {
             max-width: 800px;
             margin: auto;
             background: white;
@@ -30,6 +30,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .profile-header {
             display: flex;
             align-items: center;
@@ -37,20 +38,24 @@
             padding-bottom: 20px;
             border-bottom: 1px solid #ddd;
         }
+
         .profile-img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             border: 2px solid #ddd;
         }
+
         .btn-custom {
             background-color: #007bff;
             border: none;
             transition: all 0.3s ease;
         }
+
         .btn-custom:hover {
             background-color: #0056b3;
         }
+
         .form-control {
             border-radius: 5px;
         }
@@ -66,12 +71,13 @@
 
 
 
-<div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5">
+        <h2 class="section-title">Your Public Profile</h2>
         <div class="profile-container">
             <div class="profile-header">
-                <img src="../back/<?php echo $_SESSION['user_image'];?>" alt="Profile Picture" class="profile-img">
+                <img src="../back/<?php echo $_SESSION['user_image']; ?>" alt="Profile Picture" class="profile-img">
                 <div>
-                    <h5> <?php echo $_SESSION['user_firstName'] . " " . $_SESSION['user_lastName'] ; ?> </h5>
+                    <h5> <?php echo $_SESSION['user_firstName'] . " " . $_SESSION['user_lastName']; ?> </h5>
                     <small class="text-muted">Account Created: 2024-12-18 12:32:41</small>
                 </div>
             </div>
@@ -80,10 +86,10 @@
 
             <form action="../back/handle_profile.php" method="post" enctype="multipart/form-data">
 
-            <div class="mt-3">
-                <label class="form-label">Change Profile Picture</label>
-                <input type="file" name="image" class="form-control">
-            </div>
+                <div class="mt-3">
+                    <label class="form-label">Change Profile Picture</label>
+                    <input type="file" name="image" class="form-control">
+                </div>
 
                 <div class="row mb-3">
                     <div class="col-md-6">
