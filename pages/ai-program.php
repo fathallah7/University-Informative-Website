@@ -32,8 +32,7 @@
     <section class="program-details-section" id="about">
         <div class="program-details-container">
             <div class="program-details-text">
-                <h2 class="section-title" style="text-align:left;">AI Program</h2>
-                <!-- <h2 class="program-details-heading">Borg Al-Arab<br><span>Library</span></h2> -->
+                <h2 class="section-title">AI Program</h2>
                 <p class="program-details-description">
                     Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey.
                 </p>
