@@ -28,8 +28,6 @@
     include '../includes/header.php';
     ?>
 
-
-
     <!-- Start About Section -->
     <section class="program-details-section" id="about">
         <div class="program-details-container">
@@ -82,7 +80,6 @@
             </div>
         </div>
     </section>
-
 
     <script src="../assets/js/script.js"></script>
 

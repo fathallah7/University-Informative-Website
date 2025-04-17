@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <!--========== File CSS =========-->
@@ -21,15 +20,11 @@
     <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 </head>
-
 <body>
 
     <?php
     include '../includes/header.php';
     ?>
-
-
-
 
     <!-- Start About Section -->
     <section class="program-details-section" id="about">
@@ -48,8 +43,6 @@
         </div>
     </section>
     <!-- End About Section -->
-
-
 
 
     <!-- Staff -->
