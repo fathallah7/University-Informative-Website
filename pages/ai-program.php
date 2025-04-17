@@ -30,25 +30,23 @@
 
 
 
-
-    <!-- Start About -->
-    <section class="about-section" id="about">
-        <h2 class="section-title">AI Program</h2>
-        <div class="container">
-            <div class="about-data">
-                <h2 class="about-title">Borg Al-Arab<br>Library </h2>
-                <p class="about-description">Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey. At Borg El Arab University, we are committed to fostering knowledge and innovation for all learners.
-                    .</p>
-                <a href="#services" class="button">Our Services</a>
+    <!-- Start About Section -->
+    <section class="program-details-section" id="about">
+        <div class="program-details-container">
+            <div class="program-details-text">
+                <h2 class="section-title" style="text-align:left;">AI Program</h2>
+                <!-- <h2 class="program-details-heading">Borg Al-Arab<br><span>Library</span></h2> -->
+                <p class="program-details-description">
+                    Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey.
+                </p>
+                <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>
-            <div>
-                <img src="../assets/imgs/ai.jpeg" alt="" class="about-img" width="500px">
+            <div class="program-details-image-wrapper">
+                <img src="../assets/imgs/ai.jpeg" alt="Library Image" class="program-details-image" />
             </div>
         </div>
     </section>
-    <!-- End About -->
-
-
+    <!-- End About Section -->
 
 
     <!-- Staff -->
