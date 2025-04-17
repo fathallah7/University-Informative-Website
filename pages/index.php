@@ -129,71 +129,71 @@ require_once('../class/class.php');
 
 
 
-<!-- Start About -->
-<section class="about-section" id="about">
-    <div class="section"> 
-    <div class="container">
-        <h2 class="section-title">Discover Our Library</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h2 class="about-title">Borg Al-Arab <span>University Library</span></h2>
-                <div class="about-description">
-                    <p>Welcome to the Borg El Arab University Library, your premier academic resource center offering:</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Comprehensive collection of books and research papers</li>
-                        <li><i class="fas fa-check-circle"></i> State-of-the-art digital resources</li>
-                        <li><i class="fas fa-check-circle"></i> Collaborative learning spaces</li>
-                        <li><i class="fas fa-check-circle"></i> Expert research support</li>
-                    </ul>
-                    <p>We serve both new students and seasoned academics with resources designed to empower your educational journey and foster innovation.</p>
+    <!-- Start About -->
+    <section class="about-section" id="about">
+        <div class="section">
+            <div class="container">
+                <h2 class="section-title">Discover Our Library</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-title">Borg Al-Arab <span>University Library</span></h2>
+                        <div class="about-description">
+                            <p>Welcome to the Borg El Arab University Library, your premier academic resource center offering:</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> Comprehensive collection of books and research papers</li>
+                                <li><i class="fas fa-check-circle"></i> State-of-the-art digital resources</li>
+                                <li><i class="fas fa-check-circle"></i> Collaborative learning spaces</li>
+                                <li><i class="fas fa-check-circle"></i> Expert research support</li>
+                            </ul>
+                            <p>We serve both new students and seasoned academics with resources designed to empower your educational journey and foster innovation.</p>
+                        </div>
+                        <div class="about-actions">
+                            <a href="#services" class="btn btn-primary" style="background-color: #3C6A77;">
+                                <i class="fas fa-book-open mr-2"></i> Our Services
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Visit Us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="../assets/imgs/log.png" alt="Borg Al-Arab University Library" class="library-image">
+                    </div>
                 </div>
-                <div class="about-actions">
-                    <a href="#services" class="btn btn-primary" style="background-color: #3C6A77;">
-                        <i class="fas fa-book-open mr-2"></i> Our Services
-                    </a>
-                    <a href="#" class="btn btn-outline">
-                        <i class="fas fa-map-marker-alt mr-2"></i> Visit Us
-                    </a>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="../assets/imgs/log.png" alt="Borg Al-Arab University Library" class="library-image">
             </div>
         </div>
-    </div>
-    </div>
-</section>
-<!-- End About -->
+    </section>
+    <!-- End About -->
 
 
     <!-- Start News -->
     <section class="news-section">
-    <div class="section"> 
-        <h2 class="section-title">Recent News</h2>
-        <div class="container">
-            <div class="news-section">
-                <div class="news-container" id="newsContainer">
-                    <?php
+        <div class="section">
+            <h2 class="section-title">Recent News</h2>
+            <div class="container">
+                <div class="news-section">
+                    <div class="news-container" id="newsContainer">
+                        <?php
 
-                    $subscriber = new Subscriber();
-                    $rowData = $subscriber->ShowPosts();
+                        $subscriber = new Subscriber();
+                        $rowData = $subscriber->ShowPosts();
 
-                    while ($row = mysqli_fetch_assoc($rowData)) {
-                    ?>
-                        <a href="newsMoreinfo.php?id=<?php echo $row['id']; ?>">
-                            <div class="news-card">
-                                <img src="../admin/back/<?php echo $row['image'] ?>" alt="News 1">
-                                <div class="card-body">
-                                    <h5><?php echo $row['title'] ?></h5>
+                        while ($row = mysqli_fetch_assoc($rowData)) {
+                        ?>
+                            <a href="newsMoreinfo.php?id=<?php echo $row['id']; ?>">
+                                <div class="news-card">
+                                    <img src="../admin/back/<?php echo $row['image'] ?>" alt="News 1">
+                                    <div class="card-body">
+                                        <h5><?php echo $row['title'] ?></h5>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    <?php } ?>
+                            </a>
+                        <?php } ?>
+                    </div>
+                    <div class="pagination-dots" id="paginationDots"></div>
+                    <button class="btn btn-outline-primary see-more-btn"><a href="news.php">See More ➜</a></button>
                 </div>
-                <div class="pagination-dots" id="paginationDots"></div>
-                <button class="btn btn-outline-primary see-more-btn"><a href="news.php">See More ➜</a></button>
             </div>
-        </div>
         </div>
     </section>
     <!-- End News -->
@@ -201,48 +201,49 @@ require_once('../class/class.php');
 
     <!-- Start Services -->
     <div class="services" id="services">
-    <div class="section"> 
-        <div>
-            <h2 class="section-title"> Our Programs </h2>
-        </div>
-        <div class="container">
-            <div class="box-holder">
-                <a href="software-programe.php" class="box-link">
-                    <div class="box">
-                    <i class="fa-solid fa-laptop-code"></i>
-                        <h2>Software</h2>
-                        <p>Development, programming, databases, security, applications, frameworks, testing.</p>
-                    </div>
-                </a>
-                <a href="ai-program.php" class="box-link">
-                    <div class="box">
-                    <i class="fa-solid fa-robot"></i>
-                        <h2>AI</h2>
-                        <p>Machine learning, deep learning, automation, algorithms, data science, robotics, NLP.</p>
-                    </div>
-                </a>
-                <a href="networking-program.php" class="box-link">
-                    <div class="box">
-                        <i class="fa-solid fa-network-wired"></i>
-                        <h2>Networking</h2>
-                        <p>Protocols, security, cloud, infrastructure, administration, routing, wireless.</p>
-                    </div>
-                </a>
-                <a href="communication-program.php" class="box-link">
-                    <div class="box">
-                    <i class="fa-solid fa-tower-cell"></i>
-                        <h2>Communication</h2>
-                        <p>Signals, transmission, modulation, wireless, fiber optics, protocols, networking.</p>
-                    </div>
-                </a>
+        <div class="section">
+            <div>
+                <h2 class="section-title"> Our Programs </h2>
             </div>
-        </div>
+            <div class="container">
+                <div class="box-holder">
+                    <a href="software-programe.php" class="box-link">
+                        <div class="box">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h2>Software</h2>
+                            <p>Development, programming, databases, security, applications, frameworks, testing.</p>
+                        </div>
+                    </a>
+                    <a href="ai-program.php" class="box-link">
+                        <div class="box">
+                            <i class="fa-solid fa-robot"></i>
+                            <h2>AI</h2>
+                            <p>Machine learning, deep learning, automation, algorithms, data science, robotics, NLP.</p>
+                        </div>
+                    </a>
+                    <a href="networking-program.php" class="box-link">
+                        <div class="box">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <h2>Networking</h2>
+                            <p>Protocols, security, cloud, infrastructure, administration, routing, wireless.</p>
+                        </div>
+                    </a>
+                    <a href="communication-program.php" class="box-link">
+                        <div class="box">
+                            <i class="fa-solid fa-tower-cell"></i>
+                            <h2>Communication</h2>
+                            <p>Signals, transmission, modulation, wireless, fiber optics, protocols, networking.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End Servcies -->
 
 
-<script src="../assets/js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../assets/js/script.js"></script>
 
     <?php
     include '../includes/footer.php'

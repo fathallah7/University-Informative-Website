@@ -63,3 +63,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ---------------------------------------------
+
+// ScrollReveal Configuration
+const sr = ScrollReveal({
+    distance: '50px', // مسافة الحركة
+    duration: 1500,   // مدة التأثير
+    delay: 200,       // تأخير بين العناصر
+    reset: false       // إعادة التأثير عند التمرير مجددًا
+});
+
+sr.reveal('.home-section .content', {
+    origin: 'top', // تتحرك من الأسفل
+    interval: 150
+});
+sr.reveal('.about-text', {
+    origin: 'left', // تتحرك من الأسفل
+    interval: 150
+});
+sr.reveal('.about-image', {
+    origin: 'right', // تتحرك من الأسفل
+    interval: 150
+});
+sr.reveal('.news-card', {
+    origin: 'top', // تتحرك من الأسفل
+    interval: 150
+});
+sr.reveal('.box', {
+    origin: 'top', // تتحرك من الأسفل
+    interval: 150
+});
+
+
+
+
