@@ -88,6 +88,14 @@ class Subscriber extends User
     }
 
 
+    public function ShowEvents() {
+        require_once('../includes/conn.php');
+        $events = "SELECT * FROM `events`";
+        $eventsResult = mysqli_query($conn , $events);
+        return $eventsResult;
+    }
+
+
 
     public static function BuyBook($book_id)
     {

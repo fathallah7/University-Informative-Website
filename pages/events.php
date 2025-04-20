@@ -24,34 +24,45 @@
     ?>
 
     <section class="section">
-        <h2 class="section-title">What’s New</h2>
+        <h2 class="section-title">Events</h2>
         <div class="news">
             <div class="container my-5">
 
 
                 <div class="container my-5">
 
-                <div class="event-card">
-    <img src="../assets/imgs/college2.png" alt="Event">
+                <?php
+        $subscriber = new Subscriber();
+        $rowData = $subscriber->ShowEvents();
 
-    <div class="event-details w-100">
-        <div class="d-flex justify-content-between align-items-center">
-            <small class="text-muted">From: 2025-06-01 → To: 2025-06-03</small>
-            <span class="badge bg-success px-3 py-2 rounded-pill">
-                <i class="fa fa-users me-1"></i> 124 Registered
-            </span>
-        </div>
+        while ($row = mysqli_fetch_assoc($rowData)) {
+        ?>
 
-        <h4 class="mt-2">AI & Future Tech Conference 2025</h4>
-        <p>
-            Join us in an inspiring 3-day event where tech leaders and enthusiasts gather to explore the latest in Artificial Intelligence, Innovation, and Smart Solutions.
-        </p>
+                    <div class="event-card">
+                        <img src="../admin/back/<?php echo $row['image']; ?>" alt="Event">
 
-        <button class="register-btn mt-2">
-            <i class="fa fa-edit me-1"></i> Register
-        </button>
-    </div>
-</div>
+                        <div class="event-details w-100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">From: <?php echo $row['start_date']; ?> → To: <?php echo $row['end_date']; ?></small>
+                                <span class="badge bg-success px-3 py-2 rounded-pill">
+                                    <i class="fa fa-users me-1"></i> 124 Registered
+                                </span>
+                            </div>
+
+                            <h4 class="mt-2"><?php echo $row['title']; ?></h4>
+                            <p>
+                            <?php echo $row['content']; ?>
+                            </p>
+
+                            <button class="register-btn mt-2">
+                                <i class="fa fa-edit me-1"></i> Register
+                            </button>
+                        </div>
+                    </div>
+
+                <?php 
+                }
+                ?>
 
 
                 </div>
