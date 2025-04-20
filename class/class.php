@@ -180,6 +180,14 @@ class Subscriber extends User
 class Admin extends User {
 
 
+        public function AddStudent( $firstName , $lastName , $email , $grade ) {
+            require_once('../includes/conn.php');
+            $addStudent = "INSERT INTO `users`(`firstName`, `lastName`, `email`, `grade`)
+                            VALUES ('$firstName', '$lastName','$email','$grade')";
+            $addStudentResult = mysqli_query($conn , $addStudent);
+            return $addStudentResult;
+    }
+
         public function ShowAccounts() {
             require_once('../includes/conn.php');
             $accounts = "SELECT * FROM `users` ";
