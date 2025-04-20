@@ -94,7 +94,7 @@ class Subscriber extends User
         require('../includes/conn.php');
         session_start();
         if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])) {
-            $_SESSION['msg'] = "You must be logged in to add a book to your cart.";
+            $_SESSION['error'] = "Only Students Buy This Books - Login First";
             header('Location: ../pages/library.php');
             exit();
         }

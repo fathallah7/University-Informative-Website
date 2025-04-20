@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user'])) {
-    $_SESSION['error'] = "Login First To Write Your Message";
+    $_SESSION['error'] = "Only Students Post Here - Login First ";
     header('Location:../pages/testimonials.php');
     exit();
 }
