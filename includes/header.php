@@ -35,7 +35,7 @@ session_start();
                 <li><a href="library.php">Library</a></li>
                 <li><a href="staff.php">Staff</a></li>
                 <li><a href="testimonials.php">Testimonials</a></li>
-                <li><a href="testimonials.php">LMS</a></li>
+                <li><a href="lms.php">LMS</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
