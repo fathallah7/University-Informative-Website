@@ -48,7 +48,7 @@ session_start();
             <?php else: ?>
                 <a href="../login.php" class="user">
                     <i class="fa-solid fa-user"></i>
-                    <span>Login</span>
+                    <span>Student Login</span>
                 </a>
             <?php endif; ?>
         </div>
