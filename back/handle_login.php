@@ -5,37 +5,6 @@ include '../includes/msg.php';
 
 #############################################################################################################
 
-//  Handle Signed Up
-
-if (isset($_POST['signup'])) {
-    if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        require_once('../class/class.php');
-
-        $done = Subscriber::register($first_name, $last_name, $email, $password);
-        if ($done) {
-            $_SESSION['msg'] = "You Have Signed Up ... Can Login Now";
-            header("Location:../login.php");
-            exit();
-        } else {
-            $_SESSION['error'] = "This Email Have Registered";
-            header("Location:../register.php");
-            exit();
-        }
-    } else {
-        $_SESSION['error'] = "Enter All Information";
-        header("Location:../register.php");
-        exit();
-    }
-}
-
-
-#############################################################################################################
-
 
 // Handle Login
 
