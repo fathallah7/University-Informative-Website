@@ -236,6 +236,31 @@ class Admin extends User {
 
 
 
+        public function AddEvent( $title , $content , $startDate , $endDate , $imagePath ) {
+            global $conn;
+            require_once('../includes/conn.php');
+            $addEvent = "INSERT INTO `events`(`title`, `content`, `start_date` , `end_date` , `image`)
+                            VALUES ('$title', '$content', '$startDate' , '$endDate' , '$imagePath')";
+            $addEventResult = mysqli_query($conn , $addEvent);
+            return $addEventResult;
+        }
+
+        public function ShowEvents() {
+            require_once('includes/conn.php');
+            $events = "SELECT * FROM `events`";
+            $eventsResult = mysqli_query($conn , $events);
+            return $eventsResult;
+        }
+
+        public function DeleteEvents($id) {
+            require_once('../includes/conn.php');
+            $DeleteEvents = "DELETE FROM `events` WHERE `id` = $id";
+            $DeleteEventsResult = mysqli_query($conn , $DeleteEvents);
+            return $DeleteEventsResult;
+        }
+
+
+
         public function AddBook( $title , $price , $status , $imagePath ) {
             global $conn;
             require_once('../includes/conn.php');
