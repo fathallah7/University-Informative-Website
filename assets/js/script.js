@@ -1,3 +1,23 @@
+// Menu For Mobile (Nav)
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleMenu = document.querySelector(".toggle-menu");
+    const navLinks = document.querySelector(".header-bottom nav ul");
+    const closeMenu = document.querySelector(".close-menu");
+
+    toggleMenu.addEventListener("click", function () {
+        navLinks.classList.add("show-menu");
+    });
+
+    if (closeMenu) {
+        closeMenu.addEventListener("click", function () {
+            navLinks.classList.remove("show-menu");
+        });
+    }
+});
+
+// ---------------------------------------------
+
 const newsContainer = document.getElementById('newsContainer');
 const paginationDots = document.getElementById('paginationDots');
 
