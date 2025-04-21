@@ -40,6 +40,7 @@ session_start();
 
     <?php
     include 'includes/header.php';
+    require_once('../class/class.php');
     ?>
 
 <section class="formAdd">
@@ -102,7 +103,7 @@ session_start();
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><b>Posts</b><i style="margin-left: 10px;" class='bx bx-news'></i></h2>
+                        <h2><b>ُEvents</b><i style="margin-left: 10px;" class='bx bx-news'></i></h2>
                     </div>
                 </div>
             </div>
@@ -132,7 +133,7 @@ session_start();
                 <tbody>
                     <!-------------------------------------------START READ DATA----------------------------------------------->
                     <?php
-                    require_once('../class/class.php');
+
 
                     $admin = new Admin();
                     $rowData = $admin->ShowEvents();
@@ -154,7 +155,77 @@ session_start();
                             </td>
                             <td>
                             <a href="back/handle_events_admin.php?idDel=<?php echo $row['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a> 
-                            <a href="back/handle_po_admin.php?id_update=<?php echo $row['id']; ?>"><i style="color:rgb(12, 173, 0); " class='bx bx-edit-alt'></i></a>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                    <!-------------------------------------------END READ DATA----------------------------------------------->
+                </tbody>
+            </table>
+
+
+
+            
+
+        <!-------------------------------------------START TABLE----------------------------------------------->
+        <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2><b>Event Users Registrations</b><i style="margin-left: 10px;" class='fas fa-user-tag'></i></h2>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-striped table-hover">
+
+                <thead>
+                    <tr>
+                        <th>
+                            <h3><b>ID</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Name</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Email</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Phone</b></h3>
+                        </th>
+                        <th>
+                            <h3><b>Action</b></h3>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-------------------------------------------START READ DATA----------------------------------------------->
+                    <?php
+
+
+                    $admin2 = new Admin();
+                    $rowData2 = $admin2->ShowEventUsers();
+                    
+                    while ($row2 = mysqli_fetch_assoc($rowData2)) {
+                    ?>
+                        <tr>
+                            <td>
+                                <h4> <?php echo $row2['id']; ?> </h4>
+                            </td>
+                            <td>
+                                <h4> <?php echo $row2['name']; ?> </h4>
+                            </td>
+                            <td>
+                                <h4> <?php echo $row2['email']; ?> </h4>
+                            </td>
+                            <td>
+                                <h4> <?php echo $row2['phone']; ?> </h4>
+                            </td>
+                            <td>
+                            <a href="back/handle_events_admin.php?idDelUser=<?php echo $row2['id']; ?>"><i style="color: #a30000; " class='bx bxs-trash-alt'></i></a> 
                             </td>
                         </tr>
                     <?php

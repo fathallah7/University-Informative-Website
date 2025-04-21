@@ -211,6 +211,12 @@ class Subscriber extends User
 class Admin extends User
 {
 
+    // private $conn;
+
+    // public function __construct() {
+    //     require_once(__DIR__ . '/../includes/conn.php'); // المسار المناسب حسب مكان الكلاس
+    //     $this->conn = $conn;
+    // }
 
     public function AddStudent($firstName, $lastName, $email, $grade)
     {
@@ -299,6 +305,22 @@ class Admin extends User
         $DeleteEvents = "DELETE FROM `events` WHERE `id` = $id";
         $DeleteEventsResult = mysqli_query($conn, $DeleteEvents);
         return $DeleteEventsResult;
+    }
+
+    public function ShowEventUsers()
+    {
+        require_once('../includes/conn.php');
+        $eventUser = "SELECT * FROM `event_registrations`";
+        $eventUserResult = mysqli_query($conn, $eventUser);
+        return $eventUserResult;
+    }
+
+    public function DeleteEventUser($id)
+    {
+        require_once('../includes/conn.php');
+        $DeleteEventUser = "DELETE FROM `event_registrations` WHERE `id` = $id";
+        $DeleteEventUserResult = mysqli_query($conn, $DeleteEventUser);
+        return $DeleteEventUserResult;
     }
 
 
