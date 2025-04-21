@@ -1,6 +1,7 @@
-<?php 
+<?php
 
-abstract class User {
+abstract class User
+{
 
     public $id;
     public $name;
@@ -19,7 +20,7 @@ abstract class User {
 
     public static function login($email, $password)
     {
-        
+
         $qry = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password' ";
         require_once('../includes/conn.php');
         $result = mysqli_query($conn, $qry);
@@ -29,7 +30,6 @@ abstract class User {
             return false;
         }
     }
-
 }
 
 
@@ -38,64 +38,87 @@ abstract class User {
 class Subscriber extends User
 {
 
-    public static function register($first_name, $last_name , $email, $password)
+    public static function register($first_name, $last_name, $email, $password)
     {
         require_once('../includes/conn.php');
         $checkEmail = "SELECT * FROM `users` WHERE `email` = '$email' ";
         $checkEmaiResult = mysqli_query($conn, $checkEmail);
         if ($checkEmaiResult->num_rows > 0) {
             return false;
-        }
-        else {
+        } else {
             $sql = "INSERT INTO `users`( `firstName`, `lastName` , `email`, `password`) 
             VALUES ('$first_name' , '$last_name' , '$email' , '$password')";
-        $result = mysqli_query($conn, $sql);
-        return $result;
-    }
+            $result = mysqli_query($conn, $sql);
+            return $result;
+        }
     }
 
 
-    public function ProfileUpdate($id , $first_name , $last_name , $email , $image) {
+    public function ProfileUpdate($id, $first_name, $last_name, $email, $image)
+    {
         require_once('../includes/conn.php');
         $profileUpdate = "UPDATE `users` SET
                             `firstName`='$first_name',`lastName`='$last_name',`email`='$email',`image`='$image'
                                 WHERE `id`='$id' ";
-        $profileResult = mysqli_query($conn , $profileUpdate);
+        $profileResult = mysqli_query($conn, $profileUpdate);
         return $profileResult;
     }
 
 
-    public function ShowPosts() {
+    public function ShowPosts()
+    {
         require_once('../includes/conn.php');
         $posts = "SELECT * FROM `posts`";
-        $postsResult = mysqli_query($conn , $posts);
+        $postsResult = mysqli_query($conn, $posts);
         return $postsResult;
     }
 
-    public function ShowPostsMoreInfo($id) {
+    public function ShowPostsMoreInfo($id)
+    {
         require_once('../includes/conn.php');
         $postsMoreInfo = "SELECT * FROM `posts` WHERE `id` = $id";
-        $postsMoreInfoResult = mysqli_query($conn , $postsMoreInfo);
+        $postsMoreInfoResult = mysqli_query($conn, $postsMoreInfo);
         return $postsMoreInfoResult;
     }
 
 
-    public function ShowBooks() {
-        require_once('../includes/conn.php');
-        $books = "SELECT * FROM `library`";
-        $booksResult = mysqli_query($conn , $books);
-        return $booksResult;
-    }
-
-
-    public function ShowEvents() {
+    public function ShowEvents()
+    {
         require_once('../includes/conn.php');
         $events = "SELECT * FROM `events`";
-        $eventsResult = mysqli_query($conn , $events);
+        $eventsResult = mysqli_query($conn, $events);
         return $eventsResult;
     }
 
+    public function EventRegister($name, $email, $phone, $idEvent)
+    {
+        global $conn;
+        require_once('../includes/conn.php');
 
+        $checkQuery = "SELECT * FROM event_registrations 
+                        WHERE (email = '$email' OR phone = '$phone') AND event_id = '$idEvent'";
+        $checkResult = mysqli_query($conn, $checkQuery);
+
+        if (mysqli_num_rows($checkResult) > 0) {
+            return 'already_registered';
+        } else {
+            $insertRegister = "INSERT INTO event_registrations (name, email, phone, event_id)
+                                VALUES ('$name', '$email', '$phone', '$idEvent')";
+            $sendRegister = mysqli_query($conn, $insertRegister);
+
+            return $sendRegister ? 'success' : 'fail';
+        }
+    }
+
+
+
+    public function ShowBooks()
+    {
+        require_once('../includes/conn.php');
+        $books = "SELECT * FROM `library`";
+        $booksResult = mysqli_query($conn, $books);
+        return $booksResult;
+    }
 
     public static function BuyBook($book_id)
     {
@@ -111,7 +134,7 @@ class Subscriber extends User
         $user_email = $_SESSION['user_email'];
 
         $check_query = "SELECT * FROM cart WHERE user_id = '$user_id' AND book_id = '$book_id'";
-        $result = mysqli_query($conn , $check_query);
+        $result = mysqli_query($conn, $check_query);
 
         if ($result->num_rows > 0) {
             $update_query = "UPDATE cart SET quantity = quantity + 1 WHERE user_id = '$user_id' AND book_id = '$book_id'";
@@ -133,51 +156,51 @@ class Subscriber extends User
                 FROM cart 
                 JOIN library ON cart.book_id = library.id 
                 WHERE cart.user_id = $user_id";
-        if ( $resultCart = mysqli_query($conn , $cart) ) {
+        if ($resultCart = mysqli_query($conn, $cart)) {
             return $resultCart;
         }
-        }
-
+    }
 
     public static function RemoveFromCart($id)
     {
         require_once('../includes/conn.php');
         $delete = " DELETE FROM `cart` WHERE `id` = $id ";
-        $cartDelete = mysqli_query($conn , $delete);
+        $cartDelete = mysqli_query($conn, $delete);
         return $cartDelete;
-        }
+    }
 
 
 
-    public function ShowStaff() {
+    public function ShowStaff()
+    {
         require_once('../includes/conn.php');
         // global $conn;
         $staff = "SELECT * FROM `staff`";
-        $staffResult = mysqli_query($conn , $staff);
+        $staffResult = mysqli_query($conn, $staff);
         return $staffResult;
     }
 
 
 
-    public function AddTestimonials($userId , $userEmail , $content , $rating) {
+    public function AddTestimonials($userId, $userEmail, $content, $rating)
+    {
         require_once('../includes/conn.php');
         $addTestimonials = "INSERT INTO `testimonials`(`user_id`, `user_email`, `content` , `rating`)
                                 VALUES ('$userId','$userEmail','$content' , '$rating')";
-        $addTestimonialsResult = mysqli_query($conn , $addTestimonials);
+        $addTestimonialsResult = mysqli_query($conn, $addTestimonials);
         return $addTestimonialsResult;
     }
 
-    public function ShowTestimonials() {
+    public function ShowTestimonials()
+    {
         require_once('../includes/conn.php');
         $showTestimonials = "SELECT testimonials.*, users.firstName, users.lastName , users.image
                             FROM testimonials 
                             JOIN users ON testimonials.user_id = users.id 
                             ORDER BY testimonials.id DESC";
-        $showTestimonialsResult = mysqli_query($conn , $showTestimonials);
+        $showTestimonialsResult = mysqli_query($conn, $showTestimonials);
         return $showTestimonialsResult;
     }
-
-
 }
 
 
@@ -185,149 +208,161 @@ class Subscriber extends User
 
 
 
-class Admin extends User {
+class Admin extends User
+{
 
 
-        public function AddStudent( $firstName , $lastName , $email , $grade ) {
-            require_once('../includes/conn.php');
-            $addStudent = "INSERT INTO `users`(`firstName`, `lastName`, `email`, `grade`)
+    public function AddStudent($firstName, $lastName, $email, $grade)
+    {
+        require_once('../includes/conn.php');
+        $addStudent = "INSERT INTO `users`(`firstName`, `lastName`, `email`, `grade`)
                             VALUES ('$firstName', '$lastName','$email','$grade')";
-            $addStudentResult = mysqli_query($conn , $addStudent);
-            return $addStudentResult;
+        $addStudentResult = mysqli_query($conn, $addStudent);
+        return $addStudentResult;
     }
 
-        public function ShowAccounts() {
-            require_once('../includes/conn.php');
-            $accounts = "SELECT * FROM `users` ";
-            $accountsResult = mysqli_query($conn , $accounts);
-            return $accountsResult;
-        }
+    public function ShowAccounts()
+    {
+        require_once('../includes/conn.php');
+        $accounts = "SELECT * FROM `users` ";
+        $accountsResult = mysqli_query($conn, $accounts);
+        return $accountsResult;
+    }
 
-        public function DeleteAccounts($id) {
-            require_once('../includes/conn.php');
-            $delete = " DELETE FROM `users` WHERE `id` = $id ";
-            $accountDelete = mysqli_query($conn , $delete);
-            return $accountDelete;
-        }
+    public function DeleteAccounts($id)
+    {
+        require_once('../includes/conn.php');
+        $delete = " DELETE FROM `users` WHERE `id` = $id ";
+        $accountDelete = mysqli_query($conn, $delete);
+        return $accountDelete;
+    }
 
 
-        public function AddPost( $title , $content , $imagePath , $category ) {
-            global $conn;
-            require_once('../includes/conn.php');
-            $addPost = "INSERT INTO `posts`(`title`, `content`, `image`, `category`)
+    public function AddPost($title, $content, $imagePath, $category)
+    {
+        global $conn;
+        require_once('../includes/conn.php');
+        $addPost = "INSERT INTO `posts`(`title`, `content`, `image`, `category`)
                             VALUES ('$title', '$content','$imagePath','$category')";
-            $addPostResult = mysqli_query($conn , $addPost);
-            return $addPostResult;
-        }
+        $addPostResult = mysqli_query($conn, $addPost);
+        return $addPostResult;
+    }
 
-        public function ShowPosts() {
-            require_once('includes/conn.php');
-            $posts = "SELECT * FROM `posts`";
-            $postsResult = mysqli_query($conn , $posts);
-            return $postsResult;
-        }
+    public function ShowPosts()
+    {
+        require_once('includes/conn.php');
+        $posts = "SELECT * FROM `posts`";
+        $postsResult = mysqli_query($conn, $posts);
+        return $postsResult;
+    }
 
-        public function UpdatePosts($id , $title  , $content) {
-            require_once('../includes/conn.php');
-            $updatePost = "UPDATE `posts` SET `title`='$title', `content`='$content' 
+    public function UpdatePosts($id, $title, $content)
+    {
+        require_once('../includes/conn.php');
+        $updatePost = "UPDATE `posts` SET `title`='$title', `content`='$content' 
                 WHERE `id` = '$id' ";
-                $updatePostResult = mysqli_query($conn , $updatePost);
-            return $updatePostResult;
-        }
+        $updatePostResult = mysqli_query($conn, $updatePost);
+        return $updatePostResult;
+    }
 
-        public function DeletePosts($id) {
-            require_once('../includes/conn.php');
-            $DeletePosts = "DELETE FROM `posts` WHERE `id` = $id";
-            $DeletePostsResult = mysqli_query($conn , $DeletePosts);
-            return $DeletePostsResult;
-        }
+    public function DeletePosts($id)
+    {
+        require_once('../includes/conn.php');
+        $DeletePosts = "DELETE FROM `posts` WHERE `id` = $id";
+        $DeletePostsResult = mysqli_query($conn, $DeletePosts);
+        return $DeletePostsResult;
+    }
 
 
 
-        public function AddEvent( $title , $content , $startDate , $endDate , $imagePath ) {
-            global $conn;
-            require_once('../includes/conn.php');
-            $addEvent = "INSERT INTO `events`(`title`, `content`, `start_date` , `end_date` , `image`)
+    public function AddEvent($title, $content, $startDate, $endDate, $imagePath)
+    {
+        global $conn;
+        require_once('../includes/conn.php');
+        $addEvent = "INSERT INTO `events`(`title`, `content`, `start_date` , `end_date` , `image`)
                             VALUES ('$title', '$content', '$startDate' , '$endDate' , '$imagePath')";
-            $addEventResult = mysqli_query($conn , $addEvent);
-            return $addEventResult;
-        }
+        $addEventResult = mysqli_query($conn, $addEvent);
+        return $addEventResult;
+    }
 
-        public function ShowEvents() {
-            require_once('includes/conn.php');
-            $events = "SELECT * FROM `events`";
-            $eventsResult = mysqli_query($conn , $events);
-            return $eventsResult;
-        }
+    public function ShowEvents()
+    {
+        require_once('includes/conn.php');
+        $events = "SELECT * FROM `events`";
+        $eventsResult = mysqli_query($conn, $events);
+        return $eventsResult;
+    }
 
-        public function DeleteEvents($id) {
-            require_once('../includes/conn.php');
-            $DeleteEvents = "DELETE FROM `events` WHERE `id` = $id";
-            $DeleteEventsResult = mysqli_query($conn , $DeleteEvents);
-            return $DeleteEventsResult;
-        }
+    public function DeleteEvents($id)
+    {
+        require_once('../includes/conn.php');
+        $DeleteEvents = "DELETE FROM `events` WHERE `id` = $id";
+        $DeleteEventsResult = mysqli_query($conn, $DeleteEvents);
+        return $DeleteEventsResult;
+    }
 
 
 
-        public function AddBook( $title , $price , $status , $imagePath ) {
-            global $conn;
-            require_once('../includes/conn.php');
-            $addBook = "INSERT INTO `library`(`title`, `price`, `status`, `image`)
+    public function AddBook($title, $price, $status, $imagePath)
+    {
+        global $conn;
+        require_once('../includes/conn.php');
+        $addBook = "INSERT INTO `library`(`title`, `price`, `status`, `image`)
                             VALUES ('$title', '$price','$status','$imagePath')";
-            $addBookResult = mysqli_query($conn , $addBook);
-            return $addBookResult;
-        }
+        $addBookResult = mysqli_query($conn, $addBook);
+        return $addBookResult;
+    }
 
-        public function ShowBooks() {
-            require_once('includes/conn.php');
-            $books = "SELECT * FROM `library`";
-            $booksResult = mysqli_query($conn , $books);
-            return $booksResult;
-        }
+    public function ShowBooks()
+    {
+        require_once('includes/conn.php');
+        $books = "SELECT * FROM `library`";
+        $booksResult = mysqli_query($conn, $books);
+        return $booksResult;
+    }
 
-        public function UpdateBooks($id , $title  , $price , $status) {
-            require_once('../includes/conn.php');
-            $updateBook = "UPDATE `library` SET `title`='$title', `price`='$price' , `status` = '$status' 
+    public function UpdateBooks($id, $title, $price, $status)
+    {
+        require_once('../includes/conn.php');
+        $updateBook = "UPDATE `library` SET `title`='$title', `price`='$price' , `status` = '$status' 
                 WHERE `id` = '$id' ";
-                $updateBookResult = mysqli_query($conn , $updateBook);
-            return $updateBookResult;
-        }
+        $updateBookResult = mysqli_query($conn, $updateBook);
+        return $updateBookResult;
+    }
 
-        public function DeleteBooks($id) {
-            require_once('../includes/conn.php');
-            $DeleteBook = "DELETE FROM `library` WHERE `id` = $id";
-            $DeleteBookResult = mysqli_query($conn , $DeleteBook);
-            return $DeleteBookResult;
-        }
+    public function DeleteBooks($id)
+    {
+        require_once('../includes/conn.php');
+        $DeleteBook = "DELETE FROM `library` WHERE `id` = $id";
+        $DeleteBookResult = mysqli_query($conn, $DeleteBook);
+        return $DeleteBookResult;
+    }
 
 
 
 
-        public static function AddStaff($name , $category , $imagePath , $cv = null) {
-            require_once('../includes/conn.php');
-            $addStaff = "INSERT INTO `staff`(`name`, `category`, `image`, `cvLink`)
+    public static function AddStaff($name, $category, $imagePath, $cv = null)
+    {
+        require_once('../includes/conn.php');
+        $addStaff = "INSERT INTO `staff`(`name`, `category`, `image`, `cvLink`)
                         VALUES ('$name', '$category', '$imagePath', '$cv')";
-            $staffResult = mysqli_query($conn , $addStaff);
-            return $staffResult;
-        }
+        $staffResult = mysqli_query($conn, $addStaff);
+        return $staffResult;
+    }
 
-        public function ShowStaff() {
-            require_once('includes/conn.php');
-            $staff = "SELECT * FROM `staff`";
-            $staffResult = mysqli_query($conn , $staff);
-            return $staffResult;
-        }
+    public function ShowStaff()
+    {
+        require_once('includes/conn.php');
+        $staff = "SELECT * FROM `staff`";
+        $staffResult = mysqli_query($conn, $staff);
+        return $staffResult;
+    }
 
-        public function DeleteStaff($id) {
-            require_once('../includes/conn.php');
-            $DeleteStaff = "DELETE FROM `staff` WHERE `id` = $id";
-            $DeleteStaffResult = mysqli_query($conn , $DeleteStaff);
-            return $DeleteStaffResult;
-        }
-
-
-
+    public function DeleteStaff($id)
+    {
+        require_once('../includes/conn.php');
+        $DeleteStaff = "DELETE FROM `staff` WHERE `id` = $id";
+        $DeleteStaffResult = mysqli_query($conn, $DeleteStaff);
+        return $DeleteStaffResult;
+    }
 }
-
-
-?>

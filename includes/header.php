@@ -32,7 +32,7 @@ session_start();
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="news.php">News</a></li>
-                <li><a href="news.php">Events</a></li>
+                <li><a href="events.php">Events</a></li>
                 <li><a href="staff.php">Staff</a></li>
                 <li><a href="testimonials.php">Testimonials</a></li>
                 <li><a href="library.php">Library</a></li>
