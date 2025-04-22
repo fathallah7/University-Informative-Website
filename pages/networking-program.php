@@ -32,7 +32,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">Networking Program</h2>
                 <p class="program-details-description">
-                    Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey.
+                In the Networking department, students study how digital systems communicate. The program covers network design, configuration, and management, including topics such as routing and switching, cloud networking, wireless systems, and network security. Labs and simulations help students gain hands-on experience with real-world tools and technologies. Graduates are well-prepared for roles like network engineers, cybersecurity specialists, and system administrators.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>

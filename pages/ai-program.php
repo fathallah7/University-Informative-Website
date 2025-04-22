@@ -34,7 +34,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">AI Program</h2>
                 <p class="program-details-description">
-                    Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey.
+                This department delves into the science of intelligent systems. Students explore machine learning, natural language processing, robotics, deep learning, and data science. Courses emphasize both theoretical foundations and applied AI using real-world datasets. By the end of the program, students can design smart algorithms, develop predictive models, and contribute to fields such as automation, healthcare, finance, and more.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>

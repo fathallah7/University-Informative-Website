@@ -34,7 +34,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">Software Program</h2>
                 <p class="program-details-description">
-                    Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey.
+                The Software Engineering department focuses on the full lifecycle of software development — from problem analysis and system design to implementation and testing. Students learn multiple programming languages, software architecture, agile methodologies, version control systems, and DevOps practices. Graduates are capable of building scalable applications, whether web-based, mobile, or enterprise-level, and are prepared for careers in software development, QA, and systems analysis.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>

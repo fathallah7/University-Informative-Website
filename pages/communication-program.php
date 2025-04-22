@@ -32,7 +32,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">Communication Program</h2>
                 <p class="program-details-description">
-                    Welcome to the Borg El Arab University Library, your trusted source for academic resources in various fields of study. Our library is designed to support students and faculty with access to a wide range of books, research papers, and educational materials. Whether you are a new student or a seasoned academic, we offer resources to help you succeed in your educational journey.
+                The Communication Systems department offers a deep understanding of how information is transmitted over different media. Topics include digital communication, wireless systems, signal processing, satellite communication, and 5G technologies. With both theoretical knowledge and lab-based practice, students are trained to work in telecom, broadcasting, IoT systems, and emerging communication technologies.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>

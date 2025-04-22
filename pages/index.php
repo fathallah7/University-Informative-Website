@@ -118,10 +118,10 @@ require_once('../class/class.php');
             <img src="../assets/imgs/log.png" alt="Logo" class="logo">
             <div class="profile-content">
                 <div>
-                    <h1>Welcome To IT University</h1>
+                    <h1>Welcome To Information Technology University </h1>
                 </div>
             </div>
-            <p>The IT library offers resources for learning and innovation in computer science and technology.</p>
+            <p>The Faculty of Information Technology is a hub for innovation, creativity, and digital excellence.</p>
             <a href="#about"><i class='bx bx-down-arrow-circle'></i> About Us</a>
         </div>
     </section>
@@ -133,23 +133,23 @@ require_once('../class/class.php');
     <section class="about-section" id="about">
         <div class="section">
             <div class="container">
-                <h2 class="section-title">Discover Our Library</h2>
+                <h2 class="section-title">Discover Our University</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <h2 class="about-title">Borg Al-Arab <span>University Library</span></h2>
+                        <h2 class="about-title">Information Technology<span>University</span></h2>
                         <div class="about-description">
-                            <p>Welcome to the Borg El Arab University Library, your premier academic resource center offering:</p>
+                            <p>Welcome to the Information Technology, <br> Our programs are designed to equip students with the skills and knowledge needed :</p>
                             <ul class="features-list">
-                                <li><i class="fas fa-check-circle"></i> Comprehensive collection of books and research papers</li>
-                                <li><i class="fas fa-check-circle"></i> State-of-the-art digital resources</li>
-                                <li><i class="fas fa-check-circle"></i> Collaborative learning spaces</li>
-                                <li><i class="fas fa-check-circle"></i> Expert research support</li>
+                                <li><i class="fas fa-code"></i> Software Engineering </li>
+                                <li><i class="fas fa-robot"></i> AI </li>
+                                <li><i class="fas fa-network-wired"></i> Networking </li>
+                                <li><i class="fas fa-neuter"></i> Communication Systems </li>
                             </ul>
                             <p>We serve both new students and seasoned academics with resources designed to empower your educational journey and foster innovation.</p>
                         </div>
                         <div class="about-actions">
                             <a href="#services" class="btn btn-primary" style="background-color: #3C6A77;">
-                                <i class="fas fa-book-open mr-2"></i> Our Services
+                                <i class="fas fa-book-open mr-2"></i> About Programs
                             </a>
                             <a href="#" class="btn btn-outline">
                                 <i class="fas fa-map-marker-alt mr-2"></i> Visit Us

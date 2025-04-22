@@ -209,11 +209,6 @@
                         <input type="submit" value="Login" class="btn btn-lg btn-primary w-100" name="signIn">
                     </div>
                 </form>
-
-                <!-- Sign Up Button -->
-                <div class="input-group mb-3">
-                    <a href="register.php" class="btn btn-lg btn-danger w-100">Create an Account</a>
-                </div>
             </div>
         </div>
     </div>
