@@ -77,10 +77,10 @@ session_start();
                             <label for="postCategory" class="form-label">Grade</label>
                             <select name="grade" class="form-select" required>
                                 <option value="" disabled selected>Select Grade</option>
-                                <option value="in stock">1</option>
-                                <option value="out of stock">1</option>
-                                <option value="comming soon">3</option>
-                                <option value="comming soon">4</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select>
                         </div>
 
