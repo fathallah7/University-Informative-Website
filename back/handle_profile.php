@@ -4,8 +4,8 @@ require_once('../class/class.php');
 include '../includes/msg.php';
 ?>
 
-
 <?php
+$userid = $_SESSION['user_id'] ;
 
 if (isset($_POST['submit'])) {
     if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['email']) || !empty($_FILES['image']['name'])) {
@@ -43,7 +43,6 @@ if (isset($_POST['submit'])) {
             $_SESSION['user_email'] = $email;
             $_SESSION['user_image'] = $imagePath;
 
-
             $_SESSION['msg'] = "You Have Updated Your Profile";
             header("Location:../pages/profile.php");
             exit();
@@ -54,5 +53,35 @@ if (isset($_POST['submit'])) {
         }
     }
 }
+
+
+// if (!empty($_POST['old_pass']) || !empty($_POST['new_pass']) ) {
+
+//     $oldPassword = $_POST['old_pass'];
+//     $newPassword = $_POST['new_pass'];
+
+//     require_once('../includes/conn.php');
+
+//     $getUserQuery = "SELECT password FROM users WHERE id = '$userid'"; 
+//     $result = mysqli_query($conn, $getUserQuery);
+
+//     if ($result && mysqli_num_rows($result) === 1) {
+//         $userRow = mysqli_fetch_assoc($result);
+//         $storedPassword = $userRow['password'];
+
+//         if ($oldPassword != $storedPassword) {
+//             $_SESSION['error'] = "Old password is incorrect.";
+//             header("Location:../pages/profile.php");
+//             exit();
+//         }
+
+//         $updateQuery = "UPDATE users SET password = '$newPassword' WHERE id = $userid" ;
+//         mysqli_query($conn, $updateQuery);
+//     } else {
+//         $_SESSION['error'] = "User not found.";
+//         header("Location:../pages/profile.php");
+//         exit();
+//     }
+// }
 
 ?>

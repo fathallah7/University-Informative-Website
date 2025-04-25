@@ -20,6 +20,7 @@ if (isset($_POST['signIn'])) {
             $_SESSION['user'] = $user;
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
+            $_SESSION['grade'] = $user['grade'];
             $_SESSION['user_firstName'] = $user['firstName'];
             $_SESSION['user_lastName'] = $user['lastName'];
             $_SESSION['user_image'] = $user['image'];

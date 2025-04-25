@@ -78,7 +78,7 @@
                 <img src="../back/<?php echo $_SESSION['user_image']; ?>" alt="Profile Picture" class="profile-img">
                 <div>
                     <h5> <?php echo $_SESSION['user_firstName'] . " " . $_SESSION['user_lastName']; ?> </h5>
-                    <small class="text-muted">Account Created: 2024-12-18 12:32:41</small>
+                    <small class="text-muted">Grade : <?php echo $_SESSION['grade']?></small>
                 </div>
             </div>
             <!-- <h6>General Information</h6> -->
@@ -105,21 +105,21 @@
                     <label class="form-label">Email</label>
                     <input type="email" name="email" class="form-control" value="<?php echo $_SESSION['user_email']; ?>">
                 </div>
-                <!-- <hr> -->
+                <hr>
                 <!-- <h6>Change Password</h6>
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label">Old Password</label>
-                        <input type="password" class="form-control">
+                        <input type="password" name="old_pass" class="form-control">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">New Password</label>
-                        <input type="password" class="form-control">
+                        <input type="password" name="new_pass" class="form-control">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" name="conf_pass" class="form-control">
                 </div> -->
                 <button type="submit" name="submit" class="btn btn-custom w-100 text-white">Save</button>
             </form>
