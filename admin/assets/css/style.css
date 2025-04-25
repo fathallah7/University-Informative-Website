@@ -293,7 +293,6 @@ section {
 .side-bar .profile .image {
   height: 10rem;
   width: 10rem;
-  border-radius: 50%;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -394,6 +393,46 @@ section {
 
 /* ------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------ */
+
+
+
+.landing-page {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.landing-page h1 {
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.landing-page p {
+  font-size: 2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.landing-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-welcome {
+  font-size: 2rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-welcome:hover {
+  background-color: #0056b3;
+}
+
 
 /* Start Table  */
 

@@ -4,8 +4,8 @@
 
       <a href="home.php" class="logo">Admin Panel</a>
 
-      <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+      <form action="#" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search..." maxlength="100">
          <button type="submit" class="fas fa-search"></button>
       </form>
 
