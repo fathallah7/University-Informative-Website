@@ -5,12 +5,20 @@ include '../class/class.php';
 
 if (isset($_POST['submit'])) {
 
+
     if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['phone'])) {
 
         $name = $_POST['name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $idEvent = $_POST['idEvent'];
+
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION['error'] = "The email address is not valid.";
+            header("Location: ../pages/events.php");
+            exit();
+        }
 
         $register = new Subscriber();
         $registerStatus = $register->EventRegister($name, $email, $phone, $idEvent);
@@ -22,8 +30,10 @@ if (isset($_POST['submit'])) {
         } else {
             $_SESSION['error'] = "Registration failed. Please try again.";
         }
+        
         header("Location: ../pages/events.php");
         exit();
+
     } else {
         $_SESSION['error'] = "Enter all fields.";
         header("Location: ../pages/events.php");

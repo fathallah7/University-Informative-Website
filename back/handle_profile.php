@@ -16,6 +16,12 @@ if (isset($_POST['submit'])) {
 
         $imagePath = $_SESSION['user_image'];
 
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION['error'] = "Invalid email format.";
+            header("Location: ../pages/profile.php");
+            exit();
+        }
+
         if (!empty($_FILES['image']['name'])) {
         $imageName = $_FILES['image']['name'];
         $imageTmpName = $_FILES['image']['tmp_name'];

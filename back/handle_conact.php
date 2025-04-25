@@ -13,6 +13,12 @@ if (isset($_POST['submit'])) {
         $email = $_POST['email'];
         $message = $_POST['message'];
 
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION['error'] = "The email address is not valid.";
+            header("Location: ../pages/contact.php");
+            exit();
+        }
+
         $insertMessage = "INSERT INTO `contact` (`name`, `email`, `message`)
                         VALUES ('$name','$email','$message')";
         $sendData = mysqli_query($conn, $insertMessage);
