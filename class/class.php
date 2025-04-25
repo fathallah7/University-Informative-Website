@@ -20,7 +20,6 @@ abstract class User
 
     public static function login($email, $password)
     {
-
         $qry = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password' ";
         require_once('../includes/conn.php');
         $result = mysqli_query($conn, $qry);
@@ -34,25 +33,11 @@ abstract class User
 
 
 
-
 class Subscriber extends User
 {
 
-    public static function register($first_name, $last_name, $email, $password)
-    {
-        require_once('../includes/conn.php');
-        $checkEmail = "SELECT * FROM `users` WHERE `email` = '$email' ";
-        $checkEmaiResult = mysqli_query($conn, $checkEmail);
-        if ($checkEmaiResult->num_rows > 0) {
-            return false;
-        } else {
-            $sql = "INSERT INTO `users`( `firstName`, `lastName` , `email`, `password`) 
-            VALUES ('$first_name' , '$last_name' , '$email' , '$password')";
-            $result = mysqli_query($conn, $sql);
-            return $result;
-        }
-    }
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function ProfileUpdate($id, $first_name, $last_name, $email, $image)
     {
@@ -64,6 +49,8 @@ class Subscriber extends User
         return $profileResult;
     }
 
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function ShowPosts()
     {
@@ -81,6 +68,8 @@ class Subscriber extends User
         return $postsMoreInfoResult;
     }
 
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function ShowEvents()
     {
@@ -110,7 +99,8 @@ class Subscriber extends User
         }
     }
 
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function ShowBooks()
     {
@@ -169,7 +159,8 @@ class Subscriber extends User
         return $cartDelete;
     }
 
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function ShowStaff()
     {
@@ -180,7 +171,8 @@ class Subscriber extends User
         return $staffResult;
     }
 
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function AddTestimonials($userId, $userEmail, $content, $rating)
     {
@@ -201,10 +193,22 @@ class Subscriber extends User
         $showTestimonialsResult = mysqli_query($conn, $showTestimonials);
         return $showTestimonialsResult;
     }
+
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
+
 }
 
 
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+// ------------------------------------------------------------
 
 
 
@@ -217,6 +221,9 @@ class Admin extends User
     //     require_once(__DIR__ . '/../includes/conn.php'); // المسار المناسب حسب مكان الكلاس
     //     $this->conn = $conn;
     // }
+
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function AddStudent($firstName, $lastName, $email, $grade)
     {
@@ -243,6 +250,8 @@ class Admin extends User
         return $accountDelete;
     }
 
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function AddPost($title, $content, $imagePath, $category)
     {
@@ -279,7 +288,8 @@ class Admin extends User
         return $DeletePostsResult;
     }
 
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function AddEvent($title, $content, $startDate, $endDate, $imagePath)
     {
@@ -323,7 +333,8 @@ class Admin extends User
         return $DeleteEventUserResult;
     }
 
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public function AddBook($title, $price, $status, $imagePath)
     {
@@ -360,8 +371,8 @@ class Admin extends User
         return $DeleteBookResult;
     }
 
-
-
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     public static function AddStaff($name, $category, $imagePath, $cv = null)
     {
@@ -387,4 +398,8 @@ class Admin extends User
         $DeleteStaffResult = mysqli_query($conn, $DeleteStaff);
         return $DeleteStaffResult;
     }
+
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
+
 }
