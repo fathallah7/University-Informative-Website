@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeMenu = document.querySelector(".close-menu");
 
     toggleMenu.addEventListener("click", function () {
-        navLinks.classList.add("show-menu");
+        navLinks.classList.toggle("show-menu");
     });
 
     if (closeMenu) {
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
 
 // ---------------------------------------------
 
@@ -93,23 +94,23 @@ const sr = ScrollReveal({
 });
 
 sr.reveal('.home-section .content', {
-    origin: 'top', // تتحرك من الأسفل
+    origin: 'top', 
     interval: 150
 });
 sr.reveal('.about-text', {
-    origin: 'left', // تتحرك من الأسفل
+    origin: 'left', 
     interval: 150
 });
 sr.reveal('.about-image', {
-    origin: 'right', // تتحرك من الأسفل
+    origin: 'right', 
     interval: 150
 });
 sr.reveal('.news-card', {
-    origin: 'top', // تتحرك من الأسفل
+    origin: 'top', 
     interval: 150
 });
 sr.reveal('.box', {
-    origin: 'top', // تتحرك من الأسفل
+    origin: 'top', 
     interval: 150
 });
 
