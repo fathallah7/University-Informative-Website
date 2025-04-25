@@ -34,7 +34,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">AI Program</h2>
                 <p class="program-details-description">
-                This department delves into the science of intelligent systems. Students explore machine learning, natural language processing, robotics, deep learning, and data science. Courses emphasize both theoretical foundations and applied AI using real-world datasets. By the end of the program, students can design smart algorithms, develop predictive models, and contribute to fields such as automation, healthcare, finance, and more.
+                    This department delves into the science of intelligent systems. Students explore machine learning, natural language processing, robotics, deep learning, and data science. Courses emphasize both theoretical foundations and applied AI using real-world datasets. By the end of the program, students can design smart algorithms, develop predictive models, and contribute to fields such as automation, healthcare, finance, and more.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>

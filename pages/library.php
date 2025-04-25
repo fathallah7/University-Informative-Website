@@ -24,43 +24,43 @@
 
 <body>
 
-<?php 
-include '../includes/header.php';
-include '../includes/msg.php';
-require_once('../class/class.php');
-?>
+    <?php
+    include '../includes/header.php';
+    include '../includes/msg.php';
+    require_once('../class/class.php');
+    ?>
 
-<section class="section">
-<h2 class="section-title">Our Books</h2>
+    <section class="section">
+        <h2 class="section-title">Our Books</h2>
 
-<div class="menu-container">
+        <div class="menu-container">
 
-        <?php
-        $subscriber = new Subscriber();
-        $rowData = $subscriber->ShowBooks();
-        
-        while ($row = mysqli_fetch_assoc($rowData)) {
-        ?>
+            <?php
+            $subscriber = new Subscriber();
+            $rowData = $subscriber->ShowBooks();
 
-<div class="menu-card">
-    <img src="../admin/back/<?php echo $row['image']; ?>" alt="" class="menu__img">
-    <h3 class="menu-name"><?php echo $row['title']; ?></h3>
-    <span class="menu-detail"><?php echo $row['status']; ?></span>
-    <span class="menu-price"><?php echo $row['price']; ?>$</span>
-    <a href="../back/handle_library.php?book_id=<?php echo $row['id'] ?>" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-</div>
-<?php } ?>
+            while ($row = mysqli_fetch_assoc($rowData)) {
+            ?>
+
+                <div class="menu-card">
+                    <img src="../admin/back/<?php echo $row['image']; ?>" alt="" class="menu__img">
+                    <h3 class="menu-name"><?php echo $row['title']; ?></h3>
+                    <span class="menu-detail"><?php echo $row['status']; ?></span>
+                    <span class="menu-price"><?php echo $row['price']; ?>$</span>
+                    <a href="../back/handle_library.php?book_id=<?php echo $row['id'] ?>" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div>
+            <?php } ?>
 
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
-<?php 
-include '../includes/footer.php';
-?>
+    <?php
+    include '../includes/footer.php';
+    ?>
 
 </body>
 

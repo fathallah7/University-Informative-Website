@@ -21,6 +21,7 @@
     <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 </head>
+
 <body>
 
     <?php
@@ -34,7 +35,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">Software Program</h2>
                 <p class="program-details-description">
-                The Software Engineering department focuses on the full lifecycle of software development — from problem analysis and system design to implementation and testing. Students learn multiple programming languages, software architecture, agile methodologies, version control systems, and DevOps practices. Graduates are capable of building scalable applications, whether web-based, mobile, or enterprise-level, and are prepared for careers in software development, QA, and systems analysis.
+                    The Software Engineering department focuses on the full lifecycle of software development — from problem analysis and system design to implementation and testing. Students learn multiple programming languages, software architecture, agile methodologies, version control systems, and DevOps practices. Graduates are capable of building scalable applications, whether web-based, mobile, or enterprise-level, and are prepared for careers in software development, QA, and systems analysis.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>

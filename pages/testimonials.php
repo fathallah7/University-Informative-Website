@@ -12,7 +12,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
-    <title>Home</title>
+    <title>Testimonials</title>
 
     <style>
         body {
@@ -31,9 +31,7 @@
     ?>
 
 
-    <!-- --------------------------------------------------------------------------------------- -->
     <!-- FeedBack -->
-
 
     <div class="testimonials-section" id="testimonials-section">
         <div class="container" id="container">
@@ -87,7 +85,7 @@
                                 <h4><?php echo $row['firstName'] . " " . $row['lastName'] ?></h4>
                                 <div class="rating">
                                     <?php
-                                    $rating = $row['rating']; 
+                                    $rating = $row['rating'];
                                     for ($i = 1; $i <= 5; $i++) {
                                         echo ($i <= $rating) ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
                                     }
@@ -101,17 +99,9 @@
                     </div>
                 <?php } ?>
 
-
             </div>
         </div>
     </div>
-
-    <!-- End FeedBack -->
-    <!-- --------------------------------------------------------------------------------------- -->
-
-
-
-
 
 
     <script src="../assets/js/script.js"></script>

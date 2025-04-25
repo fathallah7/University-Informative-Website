@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!--========== File CSS =========-->
@@ -20,6 +21,7 @@
     <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 </head>
+
 <body>
 
     <?php
@@ -32,7 +34,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">Networking Program</h2>
                 <p class="program-details-description">
-                In the Networking department, students study how digital systems communicate. The program covers network design, configuration, and management, including topics such as routing and switching, cloud networking, wireless systems, and network security. Labs and simulations help students gain hands-on experience with real-world tools and technologies. Graduates are well-prepared for roles like network engineers, cybersecurity specialists, and system administrators.
+                    In the Networking department, students study how digital systems communicate. The program covers network design, configuration, and management, including topics such as routing and switching, cloud networking, wireless systems, and network security. Labs and simulations help students gain hands-on experience with real-world tools and technologies. Graduates are well-prepared for roles like network engineers, cybersecurity specialists, and system administrators.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>
@@ -55,7 +57,7 @@
 
                     $subscriber = new Subscriber();
                     $rowData = $subscriber->ShowStaff();
-                    
+
                     while ($row = mysqli_fetch_assoc($rowData)) {
                         if ($row['category'] == "Networking") {
                     ?>

@@ -69,8 +69,6 @@
     include '../includes/msg.php';
     ?>
 
-
-
     <div class="container mt-5 mb-5">
         <h2 class="section-title">Your Public Profile</h2>
         <div class="profile-container">
@@ -78,10 +76,9 @@
                 <img src="../back/<?php echo $_SESSION['user_image']; ?>" alt="Profile Picture" class="profile-img">
                 <div>
                     <h5> <?php echo $_SESSION['user_firstName'] . " " . $_SESSION['user_lastName']; ?> </h5>
-                    <small class="text-muted">Grade : <?php echo $_SESSION['grade']?></small>
+                    <small class="text-muted">Grade : <?php echo $_SESSION['grade'] ?></small>
                 </div>
             </div>
-            <!-- <h6>General Information</h6> -->
             <hr>
 
             <form action="../back/handle_profile.php" method="post" enctype="multipart/form-data">
@@ -125,8 +122,6 @@
             </form>
         </div>
     </div>
-
-
 
     <script src="../assets/js/script.js"></script>
 

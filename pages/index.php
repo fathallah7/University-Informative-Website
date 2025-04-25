@@ -128,7 +128,6 @@ require_once('../class/class.php');
     <!-- End Home -->
 
 
-
     <!-- Start About -->
     <section class="about-section" id="about">
         <div class="section">

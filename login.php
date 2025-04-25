@@ -129,7 +129,8 @@
                 padding: 0;
             }
 
-            .left-box, .right-box {
+            .left-box,
+            .right-box {
                 flex: 1 1 100%;
                 padding: 20px;
             }
@@ -140,7 +141,7 @@
             }
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -177,9 +178,9 @@
     <br>
     <br>
 
-<div class="container d-flex justify-content-center align-items-center mt-4 mb-4">
+    <div class="container d-flex justify-content-center align-items-center mt-4 mb-4">
         <div class="row border rounded-5 p-0 bg-white box-area">
-            
+
             <!-- Left Box -->
             <div class="col-md-6 left-box">
                 <div class="logoLogin">
@@ -198,7 +199,7 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control form-control-lg" placeholder="Email address" name="email_login" required>
                     </div>
-                    
+
                     <!-- Password Input -->
                     <div class="input-group mb-3">
                         <input type="password" class="form-control form-control-lg" placeholder="Password" name="password_login" required>
@@ -231,8 +232,8 @@
         </footer>
 
         <script src="assets/js/script.js"></script>
-        
 
-    </body>
+
+</body>
 
 </html>

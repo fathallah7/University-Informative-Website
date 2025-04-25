@@ -24,34 +24,32 @@
 
 <body>
 
-<?php 
-include '../includes/header.php';
-// require_once('../class/class.php');
-?>
+    <?php
+    include '../includes/header.php';
+    // require_once('../class/class.php');
+    ?>
 
+    <!-- Staff -->
+    <section class="section">
 
+        <h2 class="section-title">Our Team</h2>
 
-            <!-- Staff -->
-        <section class="section">
+        <div class="staff-section" id="staff">
 
-            <h2 class="section-title">Our Team</h2>
+            <p class="section-subtitle">Meet our team of professionals who are passionate about serving you</p>
 
-            <div class="staff-section" id="staff">
+            <div class="container">
+                <div class="card-container">
 
-                <p class="section-subtitle">Meet our team of professionals who are passionate about serving you</p>
-                
-                <div class="container">
-                    <div class="card-container">
-
-                        <?php
-                        require_once('../class/class.php');
-                        $subscriber = new Subscriber();
-                        $rowData = $subscriber->ShowStaff();
-                        while ($row = mysqli_fetch_assoc($rowData)) {
-                        ?>
+                    <?php
+                    require_once('../class/class.php');
+                    $subscriber = new Subscriber();
+                    $rowData = $subscriber->ShowStaff();
+                    while ($row = mysqli_fetch_assoc($rowData)) {
+                    ?>
 
                         <div class="card">
-                            <img class="staff-img" src="../admin/back/<?php echo $row['image']?> " alt="Staff Image">
+                            <img class="staff-img" src="../admin/back/<?php echo $row['image'] ?> " alt="Staff Image">
                             <h2> <?php echo $row['name'] ?> </h2>
                             <p> <?php echo $row['category'] ?> </p>
                             <div class="social-links">
@@ -61,21 +59,21 @@ include '../includes/header.php';
                             </div>
                         </div>
 
-                        <?php
-                            }
-                        ?>
+                    <?php
+                    }
+                    ?>
 
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
-<?php 
-include '../includes/footer.php';
-?>
+    <?php
+    include '../includes/footer.php';
+    ?>
 
 </body>
 

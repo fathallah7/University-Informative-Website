@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!--========== File CSS =========-->
@@ -20,6 +21,7 @@
     <link rel="shortcut icon" href="../assets/imgs/logoDarkWithoutBachGround2.png" type="image/x-icon">
     <title>Home</title>
 </head>
+
 <body>
 
     <?php
@@ -32,7 +34,7 @@
             <div class="program-details-text">
                 <h2 class="section-title">Communication Program</h2>
                 <p class="program-details-description">
-                The Communication Systems department offers a deep understanding of how information is transmitted over different media. Topics include digital communication, wireless systems, signal processing, satellite communication, and 5G technologies. With both theoretical knowledge and lab-based practice, students are trained to work in telecom, broadcasting, IoT systems, and emerging communication technologies.
+                    The Communication Systems department offers a deep understanding of how information is transmitted over different media. Topics include digital communication, wireless systems, signal processing, satellite communication, and 5G technologies. With both theoretical knowledge and lab-based practice, students are trained to work in telecom, broadcasting, IoT systems, and emerging communication technologies.
                 </p>
                 <a href="index.php" class="program-details-button"><i class="fas fa-house-user"></i> Home</a>
             </div>
@@ -85,4 +87,5 @@
     ?>
 
 </body>
+
 </html>

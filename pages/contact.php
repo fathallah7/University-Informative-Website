@@ -44,45 +44,44 @@ include '../includes/conn.php';
 
     <div class="container">
 
-    <div class="container">
-        <div class="row justify-content-center bg-white rounded-4 shadow-lg py-5 gx-5 px-lg-5">
-            <div class="col-md-6 text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="mb-4 mt-3">Or reach out manually to <a href="mailto:it-Library@gmail.com" class="text-decoration-none text-primary"> it-Library@gmail.com</a></p>
-                <img src="../assets/imgs/log.png" alt="IT Library Logo" class="uf-img-contact-form-01 pt-4 d-md-block d-none" style="width: 450px;">
-            </div>
-            <div class="col-md-6">
-                <form action="../back/handle_conact.php" method="post" class="p-3">
-                    <div class="mb-4">
-                        <label for="uf-imail" class="form-label fw-semibold">Email address</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-envelope"></i></span>
-                            <input type="email" name="email" class="form-control border-start-0" id="uf-imail" aria-describedby="emailHelp" required placeholder="Enter Your Personal Email">
+        <div class="container">
+            <div class="row justify-content-center bg-white rounded-4 shadow-lg py-5 gx-5 px-lg-5">
+                <div class="col-md-6 text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="mb-4 mt-3">Or reach out manually to <a href="mailto:batu@gmail.com" class="text-decoration-none text-primary">batu@gmail.com</a></p>
+                    <img src="../assets/imgs/log.png" alt="IT Library Logo" class="uf-img-contact-form-01 pt-4 d-md-block d-none" style="width: 450px;">
+                </div>
+                <div class="col-md-6">
+                    <form action="../back/handle_conact.php" method="post" class="p-3">
+                        <div class="mb-4">
+                            <label for="uf-imail" class="form-label fw-semibold">Email address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-envelope"></i></span>
+                                <input type="email" name="email" class="form-control border-start-0" id="uf-imail" aria-describedby="emailHelp" required placeholder="Enter Your Personal Email">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="uf-iname" class="form-label fw-semibold">Your name</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-user"></i></span>
-                            <input type="text" name="name" class="form-control border-start-0" id="uf-iname" required placeholder="Enter Your Name">
+                        <div class="mb-4">
+                            <label for="uf-iname" class="form-label fw-semibold">Your name</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-user"></i></span>
+                                <input type="text" name="name" class="form-control border-start-0" id="uf-iname" required placeholder="Enter Your Name">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="uf-itextarea" class="form-label fw-semibold">Your message</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-message"></i></span>
-                            <textarea class="form-control border-start-0" name="message" id="uf-itextarea" rows="4" required placeholder="Enter Your Message"></textarea>
+                        <div class="mb-4">
+                            <label for="uf-itextarea" class="form-label fw-semibold">Your message</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light" style="color: #3C6A77;"><i class="fas fa-message"></i></span>
+                                <textarea class="form-control border-start-0" name="message" id="uf-itextarea" rows="4" required placeholder="Enter Your Message"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-lg w-100 uf-ct-01-btn-primary" style="background-color: #3C6A77; color: white;">
-                        Send Message <i class="fas fa-paper-plane ms-2"></i>
-                    </button>
-                </form>
+                        <button type="submit" name="submit" class="btn btn-lg w-100 uf-ct-01-btn-primary" style="background-color: #3C6A77; color: white;">
+                            Send Message <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-
 
     </section>
 
