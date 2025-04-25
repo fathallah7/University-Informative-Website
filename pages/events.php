@@ -38,9 +38,6 @@
                             <div class="event-details w-100">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">From: <?php echo $row['start_date']; ?> → To: <?php echo $row['end_date']; ?></small>
-                                    <span class="badge bg-success px-3 py-2 rounded-pill">
-                                        <i class="fa fa-users me-1"></i> 124 Registered
-                                    </span>
                                 </div>
                                 <h4 class="mt-2"><?php echo $row['title']; ?></h4>
                                 <p>
