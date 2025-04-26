@@ -49,3 +49,7 @@ This is a **university website** built using **PHP (OOP, MVC)** and **MySQL**. I
 | **HTML, CSS, JavaScript (Bootstrap)** | Frontend design |
 | **Apache/Nginx** | Web server |
 | **Bcrypt** | Password hashing & security |
+
+## ©️ Copyright
+
+Copyright © 2025 **Abdullah Mohamed El-sayed Mohamed Fathallah** (ID: 2320365). All rights reserved.
