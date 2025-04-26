@@ -12,7 +12,7 @@
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
          <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
+         <!-- <div id="user-btn" class="fas fa-user"></div> -->
          <div id="toggle-btn" class="fas fa-sun"></div>
       </div>
 
@@ -22,13 +22,13 @@
    <div class="side-bar">
 
       <div id="close-btn">
-         <i class="fas fa-times"></i>
+         <i class="fas fa-times" style="color: #3C6A77;"></i>
       </div>
 
       <div class="profile">
          <img src="assets/imgs/log.png" class="image" alt="">
          <h3 class="name">Admin</h3>
-         <a href="#" class="btn">view profile</a>
+         <a href="#" class="btn">Admin</a>
       </div>
 
       <nav class="navbar">
