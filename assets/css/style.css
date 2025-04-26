@@ -84,7 +84,18 @@ a {
                 position: relative;
                 font-weight: 700;
                 }
-                
+
+                @media (max-width:1200px) {
+                    .section-title {
+                        text-align: center;
+                        color: var(--main2-color);
+                        font-size: 1.8rem;
+                        margin-bottom: 2rem;
+                        position: relative;
+                        font-weight: 700;
+                    }
+                }
+
                 .section-subtitle {
                 text-align: center;
                 color: #666;
@@ -119,15 +130,6 @@ a {
                         .button:hover {
                             background-color: #f6de64; 
                             color: black;
-                        }
-
-
-
-                        .hr1 {
-                            background-color: var(--main2-color);
-                            margin-right: 100px;
-                            margin-left: 100px;
-                            height: 2.5px;
                         }
                         
 
@@ -770,7 +772,7 @@ a {
     }
     
     .about-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .about-actions {
@@ -785,7 +787,7 @@ a {
 
 @media (max-width: 480px) {
     .about-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     
     .features-list li {

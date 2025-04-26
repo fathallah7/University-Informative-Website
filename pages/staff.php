@@ -32,11 +32,10 @@
     <!-- Staff -->
     <section class="section">
 
-        <h2 class="section-title">Our Team</h2>
+        <h2 class="section-title">Our Staff</h2>
 
         <div class="staff-section" id="staff">
 
-            <p class="section-subtitle">Meet our team of professionals who are passionate about serving you</p>
 
             <div class="container">
                 <div class="card-container">
