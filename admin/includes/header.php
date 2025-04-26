@@ -2,7 +2,7 @@
 
    <section class="flex">
 
-      <a href="home.php" class="logo">Admin Panel</a>
+      <a href="index.php" class="logo">Admin Panel</a>
 
       <form action="#" method="post" class="search-form">
          <input type="text" name="search_box" required placeholder="search..." maxlength="100">
