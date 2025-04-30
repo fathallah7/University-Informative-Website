@@ -9,26 +9,22 @@ This is a **university website** built using **PHP (OOP, MVC)** and **MySQL**. I
 - **User Registration & Login**:
   - Role-based access control (RBAC) for:
     - **Admins**: Full control over content and user management.
-    - **Students**: Limited access, but with the ability to manage their profile, register for courses and events, purchase textbooks, and leave feedback.
-    - **General Users/Visitors**: Can view news, events, and announcements but cannot interact with course registration or provide feedback.
+    - **Students**
+    - **General Users/Visitors**
 - **Admin Dashboard**:
-  - Manage users, posts, events, courses, and faculty profiles.
+  - Manage users, news, events, books, and faculty profiles.
 - **Student Dashboard**:
   - Students can access events, courses, and bookstore features, and manage their own profiles.
-  - **Profile Management**: Students can view and edit their personal information, such as name, email, and other contact details.
+  - **Profile Management**: Students can view and edit their personal information.
 
 ### 📂 Content Management (CRUD)
 - **News & Announcements**: Admins can create, edit, and delete updates and announcements.
 - **Events**: Admins can create and manage events, while students can register for them.
 - **Faculty Profiles**: Admins can create and manage detailed faculty profiles.
 
-### 🎓 Course & Faculty Management
-- Display **academic programs** and faculty details & staff.
-- Students can view course information and faculty details for their enrolled courses.
-
 ### 📢 Announcements & Events
 - **News & Announcements**: Admins can post updates and news about the university.
-- **Event Registration**: Students can register for events directly from the website.
+- **Event Registration**: can register for events directly from the website.
 
 ### 📚 Bookstore (Student-Exclusive Feature)
 - **Student Bookstore**: Students can purchase textbooks and other required materials directly from the website.
@@ -38,7 +34,7 @@ This is a **university website** built using **PHP (OOP, MVC)** and **MySQL**. I
 - Admins can moderate and manage student reviews and feedback.
 
 ### ✉️ Contact Form (Bonus Feature)
-- **Inquiry Form**: Users can submit their inquiries, which are either stored in the database or sent to the admin's email for prompt responses.
+- **Inquiry Form**: Users can submit their inquiries, which are either stored in the database.
 
 ## 🏗️ Tech Stack
 
@@ -49,3 +45,7 @@ This is a **university website** built using **PHP (OOP, MVC)** and **MySQL**. I
 | **HTML, CSS, JavaScript (Bootstrap)** | Frontend design |
 | **Apache/Nginx** | Web server |
 | **Bcrypt** | Password hashing & security |
+
+## ©️ Copyright
+
+Copyright © 2025 **Abdullah Mohamed El-sayed Mohamed Fathallah** (ID: 2320365). All rights reserved.
