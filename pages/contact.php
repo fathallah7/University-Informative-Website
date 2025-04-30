@@ -79,11 +79,20 @@ include '../includes/conn.php';
                         </button>
                     </form>
                 </div>
+                <!-- Google Map Section -->
+<div class="col-12 mt-5">
+    <h4 class="text-center mb-4">Our Location</h4>
+    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.0138419738882!2d29.568878175271948!3d30.8582874745239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145f7d35b368ca83%3A0x6b44d7cb3b2a22f8!2z2KzYp9mF2LnYqSDYqNix2Kwg2KfZhNi52LHYqCDYp9mE2KrZg9mG2YjZhNmI2KzZitip!5e0!3m2!1sen!2seg!4v1746023718803!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
             </div>
         </div>
     </div>
 
     </section>
+
 
 
 
