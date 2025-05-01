@@ -69,7 +69,6 @@ CREATE TABLE `posts` (
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `image` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 );

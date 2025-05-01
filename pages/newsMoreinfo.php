@@ -37,7 +37,6 @@
                         <div class="card shadow-lg border-0 rounded-3 overflow-hidden">
                             <img src="../admin/back/<?php echo $row['image']; ?>" class="card-img-top img-fluid" alt="Article illustration" style="max-height: 400px; object-fit: cover;">
                             <div class="card-body p-4">
-                                <span class="badge bg-primary mb-2"> <?php echo $row['category']; ?> </span>
                                 <p class="text-muted small mb-2"> <i class="fas fa-calendar-alt"></i> Published: <?php echo $row['date']; ?> </p>
                                 <h1 class="card-title mb-3"> <?php echo $row['title']; ?> </h1>
                                 <p class="card-text lead"> <?php echo nl2br($row['content']); ?> </p>
