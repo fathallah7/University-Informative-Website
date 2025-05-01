@@ -8,14 +8,24 @@ include '../includes/msg.php';
 
 // Handle Login
 
+session_start();
+include '../includes/msg.php';
+
 if (isset($_POST['signIn'])) {
-    if ( !empty($_POST['email_login']) && !empty($_POST['password_login']) ) {
-        $email = $_POST['email_login'];   
-        $password = $_POST['password_login'];
+    if (!empty($_POST['email_login']) && !empty($_POST['password_login'])) {
+        
+        $email = htmlspecialchars(trim($_POST['email_login']));
+        $password = htmlspecialchars(trim($_POST['password_login']));
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION['error'] = "Invalid Email Format";
+            header("Location: ../login.php");
+            exit();
+        }
 
         require_once('../class/class.php');
+        $user = User::login($email, $password);
 
-        $user = User::login($email , $password) ;
         if ($user) {
             $_SESSION['user'] = $user;
             $_SESSION['user_id'] = $user['id'];
@@ -26,22 +36,22 @@ if (isset($_POST['signIn'])) {
             $_SESSION['user_image'] = $user['image'];
 
             if ($user['role'] === 'admin') {
-                header("Location:../admin/index.php");
-            }
-            else {
-                header("Location:../pages/index.php");
+                header("Location: ../admin/index.php");
+                exit();
+            } else {
+                header("Location: ../pages/index.php");
+                exit();
             }
 
-        } 
-        else {
-            $_SESSION['error'] = "Wrong Informations";
-            header("Location:../login.php");
+        } else {
+            $_SESSION['error'] = "Wrong Email or Password";
+            header("Location: ../login.php");
             exit();
         }
-    }
-    else {
-        $_SESSION['error'] = "Enter All Informations Please";
-        header("Location:../login.php");
+
+    } else {
+        $_SESSION['error'] = "Please enter both email and password";
+        header("Location: ../login.php");
         exit();
     }
 }
