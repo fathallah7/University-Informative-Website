@@ -93,17 +93,17 @@ session_start();
 
             </div>
         </div>
-    </div>
-
-
-
+        
+        
+        
         <!-------------------------------------------START TABLE----------------------------------------------->
+    </div>
         <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><b>ُEvents</b><i style="margin-left: 10px;" class='bx bx-news'></i></h2>
+                        <h2><b>Events</b><i style="margin-left: 10px;" class='bx bx-news'></i></h2>
                     </div>
                 </div>
             </div>
@@ -163,7 +163,8 @@ session_start();
                     <!-------------------------------------------END READ DATA----------------------------------------------->
                 </tbody>
             </table>
-
+            </div>
+            </div>
 
 
             

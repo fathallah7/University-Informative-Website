@@ -73,7 +73,6 @@ session_start();
                             <option value="" disabled selected>Select a category</option>
                             <option value="news">News</option>
                             <option value="announcements">Announcements</option>
-                            <option value="events">Events</option>
                         </select>
                     </div>
 

@@ -59,7 +59,7 @@
                     $rowData = $subscriber->ShowStaff();
 
                     while ($row = mysqli_fetch_assoc($rowData)) {
-                        if ($row['category'] == "Ai") {
+                        if ($row['category'] == "AI") {
                     ?>
                             <div class="card">
                                 <img class="staff-img" src="../admin/back/<?php echo $row['image'] ?> " alt="Staff Image">
