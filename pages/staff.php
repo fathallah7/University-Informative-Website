@@ -34,9 +34,18 @@
 
         <h2 class="section-title">Our Staff</h2>
 
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <select id="categoryFilter" class="category-filter">
+                <option value="all">ِAll</option>
+                <option value="software">Software</option>
+                <option value="networking">Networking</option>
+                <option value="ai">AI</option>
+                <option value="communication">Communication</option>
+            </select>
+        </div>
+
         <div class="staff-section" id="staff">
-
-
             <div class="container">
                 <div class="card-container">
 
@@ -47,8 +56,8 @@
                     while ($row = mysqli_fetch_assoc($rowData)) {
                     ?>
 
-                        <div class="card">
-                            <img class="staff-img" src="../admin/back/<?php echo $row['image'] ?> " alt="Staff Image">
+                        <div class="card" data-category="<?php echo strtolower($row['category']); ?>">
+                            <img class="staff-img" src="../admin/back/<?php echo $row['image'] ?>" alt="Staff Image">
                             <h2> <?php echo $row['name'] ?> </h2>
                             <p> <?php echo $row['category'] ?> </p>
                             <div class="social-links">
@@ -67,8 +76,25 @@
         </div>
     </section>
 
-
     <script src="../assets/js/script.js"></script>
+
+    <script>
+        // Staff Filter
+        document.getElementById("categoryFilter").addEventListener("change", function() {
+            var selectedCategory = this.value.toLowerCase();
+            var staffCards = document.querySelectorAll(".card");
+
+            staffCards.forEach(function(card) {
+                var cardCategory = card.getAttribute("data-category");
+
+                if (selectedCategory === "all" || cardCategory === selectedCategory) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
 
     <?php
     include '../includes/footer.php';
