@@ -197,6 +197,14 @@ class Subscriber extends User
     // ------------------------------------------------------------
     // ------------------------------------------------------------
 
+    public function AddContact($name, $email, $message)
+    {
+        require_once('../includes/conn.php');
+        $insertMessage = "INSERT INTO `contact` (`name`, `email`, `message`)
+                                VALUES ('$name','$email','$message')";
+        $addContactResult = mysqli_query($conn, $insertMessage);
+        return $addContactResult;
+    }
 }
 
 
@@ -253,7 +261,7 @@ class Admin extends User
     // ------------------------------------------------------------
     // ------------------------------------------------------------
 
-    public function AddPost($title, $content, $imagePath)
+    public function AddPost($title, $content, $imagePath, $category)
     {
         global $conn;
         require_once('../includes/conn.php');

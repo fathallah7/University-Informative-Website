@@ -1,5 +1,5 @@
 <?php
-include '../includes/conn.php';
+include '../class/class.php';
 session_start();
 ?>
 
@@ -19,9 +19,9 @@ if (isset($_POST['submit'])) {
             exit();
         }
 
-        $insertMessage = "INSERT INTO `contact` (`name`, `email`, `message`)
-                        VALUES ('$name','$email','$message')";
-        $sendData = mysqli_query($conn, $insertMessage);
+        $admin = new Subscriber();
+        $sendData = $admin->AddContact($name , $email , $message);
+
 
         if ($sendData) {
             $_SESSION['msg'] = "Your Message Sent";
