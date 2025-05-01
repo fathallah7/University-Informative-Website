@@ -68,15 +68,6 @@ session_start();
                     </div>
 
                     <div class="mb-4">
-                        <label for="postCategory" class="form-label">Category</label>
-                        <select name="category" class="form-select" id="postCategory" required>
-                            <option value="" disabled selected>Select a category</option>
-                            <option value="news">News</option>
-                            <option value="announcements">Announcements</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-4">
                         <label for="postImage" class="form-label">Post Image</label>
                         <input type="file" name="image" class="form-control" id="postImage" accept="image/*" required>
                     </div>
@@ -114,9 +105,6 @@ session_start();
                             <h3><b>Title</b></h3>
                         </th>
                         <th>
-                            <h3><b>Category</b></h3>
-                        </th>
-                        <th>
                             <h3><b>Date</b></h3>
                         </th>
                         <th>
@@ -141,9 +129,6 @@ session_start();
                             </td>
                             <td>
                                 <h4> <?php echo $row['title']; ?> </h4>
-                            </td>
-                            <td>
-                                <h4> <?php echo $row['category']; ?> </h4>
                             </td>
                             <td>
                                 <h4> <?php echo $row['date']; ?> </h4>

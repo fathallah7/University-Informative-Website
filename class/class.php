@@ -253,7 +253,7 @@ class Admin extends User
     // ------------------------------------------------------------
     // ------------------------------------------------------------
 
-    public function AddPost($title, $content, $imagePath, $category)
+    public function AddPost($title, $content, $imagePath)
     {
         global $conn;
         require_once('../includes/conn.php');

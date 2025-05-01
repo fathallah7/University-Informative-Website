@@ -7,7 +7,7 @@ include '../includes/msg.php';
 <!-- Add Post -->
 <?php 
 if (isset($_POST['submit'])) {
-    if (!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['category']) && !empty($_FILES['image']['name'])) {
+    if (!empty($_POST['title']) && !empty($_POST['content']) && !empty($_FILES['image']['name'])) {
 
         $title = $_POST['title'];
         $content = $_POST['content'];
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
             if (move_uploaded_file($imageTmpName, $imagePath)) {
 
                 $admin = new Admin(9, 'Admin', 'admin@a', 'a');
-                $addPostResult = $admin->AddPost($title , $content , $imagePath , $category);
+                $addPostResult = $admin->AddPost($title , $content , $imagePath);
 
                 if ($addPostResult) {
                         $_SESSION['msg'] = "You Have Added Post Successfully!";
