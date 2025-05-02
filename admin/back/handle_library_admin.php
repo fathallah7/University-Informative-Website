@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 
             if (move_uploaded_file($imageTmpName, $imagePath)) {
 
-                $admin = new Admin(9, 'Admin', 'admin@a', 'a');
+                $admin = new Admin();
                 $addBookResult = $admin->AddBook($title , $price , $status , $imagePath);
 
                 if ($addBookResult) {

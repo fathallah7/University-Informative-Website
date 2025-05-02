@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 
         if (move_uploaded_file($imageTmpName, $imagePath)) {
 
-            $admin = new Admin(9, 'Admin', 'admin@a', 'a');
+            $admin = new Admin();
             $addEventResult = $admin->AddEvent($title, $content, $startDate, $endDate, $imagePath);
 
             if ($addEventResult) {
