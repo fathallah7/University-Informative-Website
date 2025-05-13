@@ -48,4 +48,4 @@ This is a **university website** built using **PHP (OOP, MVC)** and **MySQL**. I
 
 ## ©️ Copyright
 
-Copyright © 2025 **Abdullah Mohamed El-sayed Mohamed Fathallah** (ID: 2320365). All rights reserved.
+Copyright © 2025 **Abdullah Mohamed El-sayed Mohamed Fathallah**. All rights reserved.
